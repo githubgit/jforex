@@ -1,0 +1,1376 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: 4zit99wswB8T+N2MSshh4pnCbd2Pp
+ SMdnR79ArADyxc=
+SHA-256-Digest-Manifest: xboSFtT+BMzNWw7ouh/U3MpCE+MZyfP5e+8z6ey1jog=
+Created-By: 1.7.0_45 (Oracle Corporation)
+
+Name: com/dukascopy/indicators/GatorIndicator.java
+SHA-256-Digest: fQ7dOmkxjUn6WSLrW76Uc0OB2dxYRrCgj0V1lxb3nGU=
+
+Name: com/dukascopy/api/indicators/OptInputDescription.java
+SHA-256-Digest: p4AzC5gYNGRw/w/BIj0x8g5O3NH/V4r+q8G1UpGuHRI=
+
+Name: com/dukascopy/indicators/KeltnerChannel.java
+SHA-256-Digest: Y75C5rW+BKPf08CRpDL85Y6DIrTf0HEiKB6dkSuL65s=
+
+Name: com/dukascopy/api/IChartObject.java
+SHA-256-Digest: XUOtugU8RuPn82CId7qRqsZ6FyFznS3T8Ttxwj0w258=
+
+Name: com/dukascopy/api/feed/util/RangeBarFeedInfo.java
+SHA-256-Digest: bvb/BqHMJweXLWBaS/WKap8FYbkUP4msdQpvAk/pVKk=
+
+Name: com/dukascopy/api/feed/IPriceAggregationBar.java
+SHA-256-Digest: u+wTFftfNIewuCmgMuAxOL3LRSmBkbwOwyLNpBcT3r0=
+
+Name: com/dukascopy/api/drawings/ICandlestickChartObject.java
+SHA-256-Digest: n/Hj+pfR7iSIQ59MgTgu8ShssapKmMvPIFdk10SiiDk=
+
+Name: com/dukascopy/indicators/pattern/AbstractHeadAndShouldersPattern
+ Indicator.java
+SHA-256-Digest: LemoNo34NSMb5y6Lu8ZWWm3Fo8BX26Yg0h9Ge1mQCqo=
+
+Name: com/dukascopy/indicators/MurreyChannels2Indicator.java
+SHA-256-Digest: KVooK89mn+gZryB6a78wZOigpJLrevPsFv0rLIurT7g=
+
+Name: com/dukascopy/api/ILoadingReportPositionListener.java
+SHA-256-Digest: z8nUgHvLiNSdp7JEMikWeUG1FyCLtkNuT9EMBE3dhg0=
+
+Name: com/dukascopy/indicators/HeikinAshiSmoothLines.java
+SHA-256-Digest: FBoHfrndbrhffNsW7Xvzb8SqnmIcnDV8ey8ALoAViXE=
+
+Name: com/dukascopy/indicators/ZigZagIndicator.java
+SHA-256-Digest: zbZvIowDTvpioe8fUAWsKd8YGvQGUoMMP4wJaj3w/rY=
+
+Name: com/dukascopy/api/INewsMessage.java
+SHA-256-Digest: uL4MUleo6HUJDtRNMP04P+l47BbXA4QGohcD2KPurBs=
+
+Name: com/dukascopy/indicators/APOscillator.java
+SHA-256-Digest: /i1v1tFRuaNKIZDpVtGG+BHu12bJF0YTXC1bCpy5vNk=
+
+Name: com/dukascopy/api/IStrategy.java
+SHA-256-Digest: UCKzMjjmqz8hNyN6L59Zzl4D8hZDp8HL3fGNkaig3A8=
+
+Name: com/dukascopy/indicators/SpreadIndicator.java
+SHA-256-Digest: MK5YpYFLWYMEiyK0o6+kR0M6PDBxeaBE+TZ4/Z/gXSg=
+
+Name: com/dukascopy/api/drawings/IPatternWidgetChartObject.java
+SHA-256-Digest: w8vrLvGkoVFMVOBQAwjiXWfakxKZW4M6iifDvd6JXZI=
+
+Name: com/dukascopy/api/indicators/InputParameterInfo.java
+SHA-256-Digest: VTDc7O62Yh/sTWabYnWnisu8EE59d96jtgNWwR4BjvI=
+
+Name: com/dukascopy/api/feed/RenkoType.java
+SHA-256-Digest: DSWK774EKbpUq829/uTQ5peNudZYf08w0wEQUUW6qJ0=
+
+Name: com/dukascopy/api/drawings/ITimeMarkerChartObject.java
+SHA-256-Digest: eiJzqG0bq6bmj8xYu4GJ8CTRXCmm4w8O1QP5FtexLIU=
+
+Name: com/dukascopy/api/feed/ITickBarFeedListener.java
+SHA-256-Digest: K+uLaQmxb8FWaDTe2g19TNV62bmC24L0q8vfB0p728s=
+
+Name: com/dukascopy/indicators/RelativeVigorIndicator.java
+SHA-256-Digest: zwb3jMTcwrT0DBHixAmpgSOEU375FCwbPmpj77G4ve8=
+
+Name: com/dukascopy/api/system/JFAuthenticationException.java
+SHA-256-Digest: hdtOl2V7XXII7tCT0NlkfOaAZvzDkoUeu7PlfwMXv/s=
+
+Name: com/dukascopy/api/ReversalAmount.java
+SHA-256-Digest: IEbYCYuCZ8M2ry1Dg6LWGJEtG1mDIEkJJZ+DbgC3v+0=
+
+Name: com/dukascopy/indicators/McClellanSummationIndex.java
+SHA-256-Digest: 9LhW7LMJkvtvVNACosGZ96QZr5RpY+W2ofosPHRfCrU=
+
+Name: com/dukascopy/api/DefaultColors.java
+SHA-256-Digest: zJFfWUnYMK64XQb8kl+LYsGnUiNMXV073hD1OD98fx0=
+
+Name: com/dukascopy/indicators/RSIIndicator.java
+SHA-256-Digest: nAyNXbjUWV7Akb0G9qLBlq5VgOvxkDh3bnwP7a3O0gE=
+
+Name: com/dukascopy/api/indicators/DisplayMode.java
+SHA-256-Digest: bt7wl8g8n3CsHWX2Buwm/LWQvcLdqETMt8lA+ERrozY=
+
+Name: com/dukascopy/indicators/AskBidVolumesIndicator.java
+SHA-256-Digest: 7x+OTs8A1zRqsMer6ZyulXE1Jh8CKbBxLXc3+9x98e4=
+
+Name: com/dukascopy/indicators/ChandeDynamicMomentumIndex.java
+SHA-256-Digest: VG9pUv7Qzo2O1/hXX3C+yvgIQ0WCpQFZyq3ih1JAysw=
+
+Name: com/dukascopy/api/plugins/widget/IPluginWidget.java
+SHA-256-Digest: IrcEP8cq7xngkORwsNEgCOMFTyTRsNaKaAzcj43XjuA=
+
+Name: com/dukascopy/api/strategy/StrategyListener.java
+SHA-256-Digest: eU5kBi7wWJu3pOfbqb8I7fo3bAqoWhHb1CHeyzq7CEw=
+
+Name: com/dukascopy/indicators/InvertedPricesIndicator.java
+SHA-256-Digest: s9Il7XnbGQ9uq2rML60u53LQ1WB+tBD/Ups9zZoxPZo=
+
+Name: com/dukascopy/api/JFUtils.java
+SHA-256-Digest: d3YGcQvtvdOaUSELbyxrTP7/cQ7oPt/QUEjRWs1CQFQ=
+
+Name: com/dukascopy/api/IReportPosition.java
+SHA-256-Digest: XoqoZCR5/vMZ4NtSF3y/ORoOHSMUK2C34BHDqIUZJs0=
+
+Name: com/dukascopy/api/Filter.java
+SHA-256-Digest: WUr7ARrWsuwjs+EO8PeverWmMMbNmFm2CUhQzFGoa7U=
+
+Name: com/dukascopy/indicators/CustomCandleIndicator.java
+SHA-256-Digest: ezrY3dUA/HIvoqfueJxBbKJu9uukcjKTd/C/+QOqF+4=
+
+Name: com/dukascopy/api/IConnectionStatusMessage.java
+SHA-256-Digest: WG3CKwlAl1rwEL+2Eva9/pZtEmANmTLRYKd1e7Ntnpg=
+
+Name: com/dukascopy/api/drawings/IChartDependentChartObject.java
+SHA-256-Digest: 1crbpW2k9IT2EedKbBpk28t9iTewLfW9Z5xoew9aWa0=
+
+Name: com/dukascopy/api/strategy/local/ILocalStrategyDescriptor.java
+SHA-256-Digest: eAu9kdcpxEehP2SNbXbewvNGqYj9k1GGTCrhKO1GXao=
+
+Name: com/dukascopy/indicators/ButterworthFilterIndicator.java
+SHA-256-Digest: Ft5tCjolGJ9EaqgcaUQZ9q5AHer3VrR1vzj6ATGrRYg=
+
+Name: com/dukascopy/api/IHighLowListener.java
+SHA-256-Digest: p66ar7nNIuQI8ac6eS3EYsZXKgvjMErSDJeCTq/ZRWg=
+
+Name: com/dukascopy/indicators/VolumeEXTIndicator.java
+SHA-256-Digest: 4u5EMRZWDJe1IhBqfdHmGPhX8YOduGVMnrYW7v9KnrI=
+
+Name: com/dukascopy/api/feed/util/TicksFeedDescriptor.java
+SHA-256-Digest: ZoaaH/w33BnuzqKOa/4Y+E+KSgx/+10LX2Bd/WS7P74=
+
+Name: com/dukascopy/api/drawings/ILeveledChartObject.java
+SHA-256-Digest: udDBLIVjHO8Wb7vt0Vh8d189/x0lxZZq6XuiiUWtdHU=
+
+Name: com/dukascopy/api/system/IPreferences.java
+SHA-256-Digest: dNHilMxYTkF8s82/50i4tMizE/wrte7hM3KWf78IvzE=
+
+Name: com/dukascopy/indicators/VortexIndicator.java
+SHA-256-Digest: qiV+Y9Up2XyhJYqibLaeOOE4Fo8M4m8G+VAD51ZVA5c=
+
+Name: com/dukascopy/api/drawings/IPercentChartObject.java
+SHA-256-Digest: Cct/Yi+rKPLrkskG61BiIX+kjn/oQ6ZQkdpSrhOK6VE=
+
+Name: com/dukascopy/indicators/RainbowChartsIndicator.java
+SHA-256-Digest: sXmMghagzoydbiV5bkEijiN3XRvY5woZytVK7q6KPIU=
+
+Name: com/dukascopy/api/indicators/InstrumentListDescription.java
+SHA-256-Digest: ASuPz9pBlD+7Pc5VuP7c9lZfW/lRdGxcv2aq7GT24HY=
+
+Name: com/dukascopy/api/ChartObjectAdapter.java
+SHA-256-Digest: GixKUdrnYWwB+1LEJrwLajtkMrVeXKu8RG2ouhbCb58=
+
+Name: com/dukascopy/api/plugins/ui/JFOrderAmountPanel.java
+SHA-256-Digest: 5F7cM8bT56KGDbWKE7tigEUiJvwZ4cVPBqsaLmBN++k=
+
+Name: com/dukascopy/indicators/SMIIndicator.java
+SHA-256-Digest: ed2wN+qaHdgyjShM3p8+jmgJDVCcSGRatw9ubmqBNvc=
+
+Name: com/dukascopy/api/IReportService.java
+SHA-256-Digest: 01P9ELaxqk77lWj/pK+wSXc60kSTQPihdAW+TRh8s30=
+
+Name: com/dukascopy/api/indicators/IChartInstrumentsListener.java
+SHA-256-Digest: ZBQwxN2fJvus6gkF5EE0cR97TnyrHHRAQZQYzn1KWQs=
+
+Name: com/dukascopy/api/plugins/widget/PluginWidgetListener.java
+SHA-256-Digest: mT9/5uiJx1OG+0RKtBbu33csuWO2ht+2eStGQ8IyGrc=
+
+Name: com/dukascopy/indicators/FractalIndicator.java
+SHA-256-Digest: //DUFTAE4MpWAGQjZFfoCccry+Zwcovz0ybuCK3bOg4=
+
+Name: com/dukascopy/api/indicators/DoubleListDescription.java
+SHA-256-Digest: TnTPTXxlIglh2R3pyJZ6uCELakGnkdOJZppAX2EvFNE=
+
+Name: com/dukascopy/api/plugins/ui/JFRadioButton.java
+SHA-256-Digest: QH6DGNJQ9BbovU23tc21wZTh6yGKKIwfcZZ4CH0DUNM=
+
+Name: com/dukascopy/api/plugins/ui/JFInstrumentComboBox.java
+SHA-256-Digest: W4OGanHDC7hv1OCLUwgtIkZvEywr8eHTGYzpdd49z04=
+
+Name: com/dukascopy/indicators/pattern/AscendingTrianglePatternIndicat
+ or.java
+SHA-256-Digest: ENXu5JFNgoWcdFgtmo7nvEKJhzAfYFxqY3pKkeXftH0=
+
+Name: com/dukascopy/api/drawings/ITakeProfitChartObject.java
+SHA-256-Digest: XLBaysVpF88Xgh34z6h6BfLUc3yywFG1O6GbS2tu/LQ=
+
+Name: com/dukascopy/api/drawings/ITextChartObject.java
+SHA-256-Digest: UpFR3GhoY8R6O9lzqzHF+YfBe+fAuLbx0RXENrvkLq0=
+
+Name: com/dukascopy/api/drawings/IAndrewsPitchforkChartObject.java
+SHA-256-Digest: ukP8gL/6LgyHfnivUzMnQnkzlqdeji+OJ6mNJ6CWIn0=
+
+Name: com/dukascopy/api/IOrder.java
+SHA-256-Digest: jlU02OVPH5PkN8G3Y+78P/LVK0trr0bLssBdUZuCRsg=
+
+Name: com/dukascopy/indicators/MurreyChannelsIndicator.java
+SHA-256-Digest: QYl/ZJKbKGA1XQvZH5L/dySFQV+aovwAlWKunkK2zTE=
+
+Name: com/dukascopy/api/IBar.java
+SHA-256-Digest: YZ1Y4ta75r72iDTSlDcoYPXOZo7MxKSj1Xf4zpxu+kw=
+
+Name: com/dukascopy/indicators/PPOscillator.java
+SHA-256-Digest: herPYCt5thaxgw5cjCRmrQH7BKD8/WMJJiDTu6pWvxY=
+
+Name: com/dukascopy/indicators/BearPowerIndicator.java
+SHA-256-Digest: A7s7zwYbRa0h3qOZMI27GXQ2Fw8OUTwLqtrl1UGq+9Y=
+
+Name: com/dukascopy/api/feed/IRenkoBar.java
+SHA-256-Digest: AgIPoXrSGuC1bs9j5P6PgXxQmO/nmrdqnwNuaSD/p0I=
+
+Name: com/dukascopy/indicators/TimeSegmentedVolumeIndicator.java
+SHA-256-Digest: AC2TFGtx1oA4SkyZfGHjNCAGNnOiAUBZTnCUxTX8wug=
+
+Name: com/dukascopy/api/util/IEmailResponse.java
+SHA-256-Digest: tajXyPnxEu4yXSCmgDJHAULUd8Nnened1RQ+S5e6fVk=
+
+Name: com/dukascopy/api/drawings/IPriceMarkerChartObject.java
+SHA-256-Digest: bfBBdszdyiPFEhUxR4MaqL1dB96911xF1TjjMvCz8Gs=
+
+Name: com/dukascopy/indicators/ChaikinVolatilityIndicator.java
+SHA-256-Digest: 1gZcx4mpsVT2U6O/A9wq3Y8Y5QPSSG9C1mCgyBFJmBk=
+
+Name: com/dukascopy/api/feed/IPointAndFigureFeedListener.java
+SHA-256-Digest: q6u2yiLIdNfJPxTVMiogfuomrjYRgFzOxu4sxK5wd7s=
+
+Name: com/dukascopy/api/indicators/IMinMax.java
+SHA-256-Digest: /h9r0Txp4MrW4LO6ocOS17zKdbhIeJPCwVS62v4vkh4=
+
+Name: com/dukascopy/indicators/KurtosisIndicator.java
+SHA-256-Digest: RIQI8NwcdtFKPATtXbqyaax1M47BaPBlEgYMMcv0lXk=
+
+Name: com/dukascopy/indicators/FibonacciPivot2Indicator.java
+SHA-256-Digest: BtNUFAqs/JKrIoc1ua7Y34/IH/cHeHHfSfaJZXmE3zo=
+
+Name: com/dukascopy/indicators/HeikinAshiSmooth.java
+SHA-256-Digest: mg2hd1dIX2yg0VxaicjUEpWfoUizMpVf5MuiAis/zO8=
+
+Name: com/dukascopy/api/DataLoadingListener.java
+SHA-256-Digest: tykhS0Gl5EzEc1i6ogZ56VweilNBvBHkVWlhKqy0aIw=
+
+Name: com/dukascopy/indicators/TrendEnvelopesIndicator.java
+SHA-256-Digest: ookeSC0UxyCHA6AVE305Po6OWsKuu78aeuYEZZ4grmw=
+
+Name: com/dukascopy/api/ICurrencyConverter.java
+SHA-256-Digest: eYnMlWRXGdvKtECTpswBD3Pi52Hy1d23k2c/YA1OjAU=
+
+Name: com/dukascopy/indicators/MACDEXTIndicator.java
+SHA-256-Digest: K60uyextUEvNYjKCj99hmKHla6L3BpbdCsBei82tExo=
+
+Name: com/dukascopy/api/feed/util/TimePeriodAggregationFeedInfo.java
+SHA-256-Digest: 34nrny8050pvhzFRACZPJucUUPgLVhGB3Y94M7+MDj4=
+
+Name: com/dukascopy/api/drawings/ISignalUpChartObject.java
+SHA-256-Digest: /JuWKBDegtEe24+dvy/YVR+oWxOFl7xs7/g49vl3q80=
+
+Name: com/dukascopy/api/drawings/ILabelChartObject.java
+SHA-256-Digest: Y08DaCf7/9fAtgwDYBe8ZYjLOQNHCZf0xijMopzIYPw=
+
+Name: com/dukascopy/indicators/LWMAIndicator.java
+SHA-256-Digest: qvzRmWCz/Uc8X9rOu/4+jG0wvk4zhNMpwsmkGe50M7M=
+
+Name: com/dukascopy/api/indicators/OptInputParameterInfo.java
+SHA-256-Digest: LPHFXzffJlzVCENJ4ofNFwRLx/NI9LhLA0v1HqU17+M=
+
+Name: com/dukascopy/api/Period.java
+SHA-256-Digest: XYzoT2qfg9dAOR5FjEBsoJA9vW3Xs+yJoxuSM9vOUhw=
+
+Name: com/dukascopy/indicators/pattern/DoubleBottomPatternIndicator.ja
+ va
+SHA-256-Digest: tolJtwku+nYGn9aTF4tpp/r2EPM4XnKRlMlPrLUMMXs=
+
+Name: com/dukascopy/api/feed/util/KagiFeedDescriptor.java
+SHA-256-Digest: vq8Lrirr0UarjaJV2kBIQmhtbWZfiJlqpmqSxY/1jC0=
+
+Name: com/dukascopy/indicators/MACDIndicator.java
+SHA-256-Digest: QYENlilJny3AbxV3NwbT3TwBB5FsGuCd5FV9c8OQD1E=
+
+Name: com/dukascopy/api/LoadingDataListener.java
+SHA-256-Digest: OWnvlSI3j+ERHkIz9ZrL0NsSObNLcKSYGKLqElJgWNY=
+
+Name: com/dukascopy/api/drawings/IOrderLineChartObject.java
+SHA-256-Digest: 0Smbq+pQkgFZAzwcH3PPhJuem7gA2sxqT+yqB2C7xfI=
+
+Name: com/dukascopy/api/drawings/IFiboRetracementChartObject.java
+SHA-256-Digest: sHI6NEI4qAtrXsnaV6t2a/4eACzq2kraOP+fRcwK+uU=
+
+Name: com/dukascopy/api/strategy/remote/IRemoteStrategyDescriptor.java
+SHA-256-Digest: mCiiOIkH/E1SXXmYYTKRJb4iAxcB51kLxMEdmAdLVlY=
+
+Name: com/dukascopy/api/strategy/IStrategyResponse.java
+SHA-256-Digest: 8QPzAoMTw2qfbIcO88UHerXeVJpvBe9PA3PpRX5haOA=
+
+Name: com/dukascopy/indicators/WaddahAttarTrend.java
+SHA-256-Digest: q5/SJT0ude/BO7WLCprm4MR3+TxmX/tjKB3b7J4bjEo=
+
+Name: com/dukascopy/api/indicators/BooleanOptInputDescription.java
+SHA-256-Digest: hlc8DxFGTYLN9IwWkYb7IuUWMG6ObYAh46jMIiWIY8o=
+
+Name: com/dukascopy/api/system/TesterFactory.java
+SHA-256-Digest: /9Fm11zkXeeGaYo6qlFgzxXKHf2+ZQvsRmCYY7GpblQ=
+
+Name: com/dukascopy/api/feed/IFinancialBarFeedListener.java
+SHA-256-Digest: T+qcEnABUM6Aumtk+nX9EsUVhpn6fjgcAW7Vq+x6fjA=
+
+Name: com/dukascopy/indicators/AbstractPivotIndicator.java
+SHA-256-Digest: F/BG11O1YFqGAzhH4uj4SnGuB3JhdzkflrI2p6sGL7I=
+
+Name: com/dukascopy/indicators/MiddlePricesIndicator.java
+SHA-256-Digest: 7tz8eIQijvhHFsPk+LMPL6UDxadQRSaxla3AvavEo1U=
+
+Name: com/dukascopy/indicators/WSMTimeIndicator.java
+SHA-256-Digest: L3AXp45o+lEdvWvVnRH3D+kOlrNb6Us8XNSfYgdE57U=
+
+Name: com/dukascopy/api/ChartObjectListener.java
+SHA-256-Digest: UFaUCesLqZ+6s4L+2amondTIIkr2oIryt9YfOW1nc5w=
+
+Name: com/dukascopy/indicators/AC2Indicator.java
+SHA-256-Digest: FYadXUqDsf2QUqHK8fRHVfgiyRabgUq7p8SlEu2hFQk=
+
+Name: com/dukascopy/api/system/Overnights.java
+SHA-256-Digest: bFXp7xCtK07f1a+VC24yA8CmHU2nEiSwzXH1n7dL5h0=
+
+Name: com/dukascopy/api/feed/IFinancialTickFeedListener.java
+SHA-256-Digest: 1eq2Z0Vph2Yw7PswE4CG55DC8yk8BPLMHonjQzuMHN4=
+
+Name: com/dukascopy/indicators/MAIndicator.java
+SHA-256-Digest: 6yUeJvEY//jlbXE0285PuIVioh5EXFf17vEARFxhbsE=
+
+Name: com/dukascopy/indicators/TrueStrengthIndex.java
+SHA-256-Digest: rYYDEj63RCFWEqVc1j+Sau9H3cPs61MX/MDuCuJ/a68=
+
+Name: com/dukascopy/api/ICalendarMessage.java
+SHA-256-Digest: PejZUNQszth5WSeYKcP3T/IG6nKX+jnLrPl6jTZ+yao=
+
+Name: com/dukascopy/api/system/ISystemListener.java
+SHA-256-Digest: AJA6TGBIYzFK5BiBU74qdFFE1SIXJzDAHRzjzuai0kc=
+
+Name: com/dukascopy/api/feed/IFeedDescriptor.java
+SHA-256-Digest: Odj0ZnVnxfjRvLgnWXzK/2Nhr5/W7uOzzevtfhXDKbo=
+
+Name: com/dukascopy/indicators/Mama2Indicator.java
+SHA-256-Digest: u1hIeTlMEav9wuUI75MsNNmKnlNVTWP7CNP7eUpCCBo=
+
+Name: com/dukascopy/indicators/HiLowIndicator.java
+SHA-256-Digest: 1v1TIfeKs8cZ3CiAglN14c56LKnW/+xT+5EGonCG26g=
+
+Name: com/dukascopy/api/IWithdrawalMessage.java
+SHA-256-Digest: 2NueasYLKevcDbjEWVAjseHuCLmqgiwyeyjO0VBpcS4=
+
+Name: com/dukascopy/indicators/pattern/AbstractPatternIndicator.java
+SHA-256-Digest: saG5s4xc7Mojsj2JU3Ew+FS23jB8Ae8S+eRPb0OBw1Q=
+
+Name: com/dukascopy/api/IIndicatorPanel.java
+SHA-256-Digest: afSL+NRwM5EKVj7lyJ9TPrnOqRpKP3FidTV8UOBpJlo=
+
+Name: com/dukascopy/indicators/DonchianChannel.java
+SHA-256-Digest: czFCmklfpzgmxHxXU5RM9GQTwpXEX76BXIrEJE6Ezww=
+
+Name: com/dukascopy/api/ITimeDomain.java
+SHA-256-Digest: dUjteJZpi0c6PLEF8hPN0ngzkEn3tNfI2OWsW2YSBrQ=
+
+Name: com/dukascopy/indicators/pattern/DoubleTopPatternIndicator.java
+SHA-256-Digest: syolqB/5rAXccNtzcAeXvqCNmuouTJL+ePnkRAHqRKg=
+
+Name: com/dukascopy/indicators/TradersDynamicIndex.java
+SHA-256-Digest: 3Ubp5K9tf9XEEkMKMaO7e0WiaFPtv1zw+AXD2Dt1bpI=
+
+Name: com/dukascopy/api/plugins/ui/JFLabel.java
+SHA-256-Digest: zX6/NtCzTjuNSyLid+BTFBFt0A0Vz6SZi3R3ypLgZIk=
+
+Name: com/dukascopy/indicators/GannTrendOscillator.java
+SHA-256-Digest: OUk3NF3Db5udUjt3dKHPYgVxv+IdbTIEIhvZpwLG3DU=
+
+Name: com/dukascopy/api/IWLabelData.java
+SHA-256-Digest: aKL5E4lTlwn/ptzK6MBYCKjrdUraZ4RD0Xe8GyuT9C8=
+
+Name: com/dukascopy/indicators/BWMFIIndicator.java
+SHA-256-Digest: Yli+m9o5Y0hCDKUCstsWJ4+mrFxH6mv7Kip8mU3N2Cg=
+
+Name: com/dukascopy/api/feed/RenkoCreationPoint.java
+SHA-256-Digest: YMfZwSARbYE5t0+6U+uEawk6241A2ZX3Z3jCAR4Ffqw=
+
+Name: com/dukascopy/api/Library.java
+SHA-256-Digest: dIe/pTpbs9EHmHhVzgB6j6d8ODKdiNrJA3HwXCoWkXI=
+
+Name: com/dukascopy/api/IClientChartController.java
+SHA-256-Digest: iAGfFoeM4KR5NQTP+lWz0Cd9aMr/7jkcDWntx1f5qv8=
+
+Name: com/dukascopy/indicators/CamarillaPivot2Indicator.java
+SHA-256-Digest: wqj7ojO4Kk9DW6hl/L7Qv4EsWt8WlH95AYTZz/doI7k=
+
+Name: com/dukascopy/api/IConsole.java
+SHA-256-Digest: kOX3q+RsXOacvZxUtoT/5HRPPbYZ45OEQ7pI5xVXwIg=
+
+Name: com/dukascopy/api/indicators/DoubleRangeDescription.java
+SHA-256-Digest: G9gBLhgYkLYJ3J0h4dzoJdxXn23nz//DQyrINn6k3GY=
+
+Name: com/dukascopy/api/indicators/LevelInfo.java
+SHA-256-Digest: n9G3Iur5LYjZkoCQXjh9PC1dGTMdFqKk16gdWmxUZNs=
+
+Name: com/dukascopy/api/feed/ILineBreak.java
+SHA-256-Digest: N+rsCLLgGh18nUzz4cJZtJrxbxFDk6Qp/7Yxeje/Xj8=
+
+Name: com/dukascopy/api/IEngine.java
+SHA-256-Digest: N11h/5tiVxTbWzr+D3awRLGGvscYJFMO6cWv0E42FEg=
+
+Name: com/dukascopy/indicators/PercentBollingerBandsExt.java
+SHA-256-Digest: knrsNEBGi1cdz8+PHKaai6n0oUJNHkBRo2HpVNAe5bs=
+
+Name: com/dukascopy/api/drawings/IGannAnglesChartObject.java
+SHA-256-Digest: K3GtIUCEvsXHcjIcpc8jVzCysvqg2QPd1hIR4GFd/1s=
+
+Name: com/dukascopy/api/feed/ITickFeedListener.java
+SHA-256-Digest: PunQuzkl8iEPPT2vdgmFfvqj60eSLsMd27hVPo1y7IQ=
+
+Name: com/dukascopy/indicators/GuppyMultipleMovingAverage.java
+SHA-256-Digest: mKvmaumPzVAiuZf8cxlHsOHR8bUSMTdMBu5Elo9wKas=
+
+Name: com/dukascopy/api/indicators/IntegerRangeDescription.java
+SHA-256-Digest: H7a+RsirmUhJl/GHjXRf3EiSE14dXySiEuGuyAibi30=
+
+Name: com/dukascopy/api/ICurrency.java
+SHA-256-Digest: o0lHTcRfS+rbt/nYQKsGFdwYgzgaWCiKLxyt6ZkS+7g=
+
+Name: com/dukascopy/api/DataType.java
+SHA-256-Digest: sM3CM5YIKV0garWGovJDxX0tklul5HzqVQFXMEApI94=
+
+Name: com/dukascopy/api/system/tester/ITesterExecutionControl.java
+SHA-256-Digest: cXKQ7XbpsmqinaDG8TGtV54EBG9uQhAuHP66dit/D3g=
+
+Name: com/dukascopy/api/feed/util/TimePeriodAggregationFeedDescriptor.
+ java
+SHA-256-Digest: waQyoQvCX82zqi6t7zhkD/dcLeunogJrnLKw3MgQBLs=
+
+Name: com/dukascopy/api/strategy/local/LocalStrategyListener.java
+SHA-256-Digest: joNdrmMVvZzQLqWjYDtVVZ8I+kpLDu8V+RM3FQHoKUY=
+
+Name: com/dukascopy/indicators/EhlersLaguerreRelativeStrengthIndex.jav
+ a
+SHA-256-Digest: S8hsS7ZcAxG8waEcHg0IJ+cUFwvIugkRXkuj0JEJGCU=
+
+Name: com/dukascopy/api/IClientChartPresentationManager.java
+SHA-256-Digest: qofIiEAHLmxmlwylyhtyLwDP8tbotXGJWgtXgHgtPmU=
+
+Name: com/dukascopy/indicators/BollingerBands.java
+SHA-256-Digest: Y0iGd8lScIaOR+QVOIWPBucsTV56pqhiiycBBBqkoJA=
+
+Name: com/dukascopy/indicators/pattern/FallingWedgePatternIndicator.ja
+ va
+SHA-256-Digest: M5GA4JGschFpCpdwGGGiAiqeNbit5JHSWqqb0n5dLk0=
+
+Name: com/dukascopy/indicators/AwesomeOscillator.java
+SHA-256-Digest: jJQMQguJf9ZJf3Yh+RDu6BFY0zpOz1dGjmP8yBInaFo=
+
+Name: com/dukascopy/indicators/BullsPowerIndicator.java
+SHA-256-Digest: v/m5flM+DgjBz07pu9T9+dKs7WrQYLEW//61eXjikTc=
+
+Name: com/dukascopy/api/Unit.java
+SHA-256-Digest: 10E91aImhWaUyof2G1n5wT4mAzG497SeJZhk3Xoqn+U=
+
+Name: com/dukascopy/indicators/DarvasBoxIndicator.java
+SHA-256-Digest: 6PvSHQ/lqVPlQcHHrXOendKtQMb+XA45tg5OHNZSk7o=
+
+Name: com/dukascopy/api/IChartPanel.java
+SHA-256-Digest: lYU0MNPtWulXMcnzkyBL/LnLadK6rxT848eSNFqOOkI=
+
+Name: com/dukascopy/api/chart/IChartTheme.java
+SHA-256-Digest: eGpbeiqkVQA/hiL9MQ/ZVAnZPH2TdlvyaiPAPJhtV8I=
+
+Name: com/dukascopy/api/IClientInfo.java
+SHA-256-Digest: JiQMm1lnwWyGnyR0cF6aiydHE6WDIb5rzRIfgPwErq8=
+
+Name: com/dukascopy/api/CustomIndicators.java
+SHA-256-Digest: 3xpe7XIgDEDuQO3ozGRA5RBnQrjWhEVDf3Fie6fsmtY=
+
+Name: com/dukascopy/api/ITick.java
+SHA-256-Digest: EosfncqfkyQw1sOx8mdrVfO122tRpdmrvN/x4RM4g64=
+
+Name: com/dukascopy/api/feed/util/RangeBarFeedDescriptor.java
+SHA-256-Digest: eQdNsxyuc98PF37tBkQxWJp+2fmK0W/c55bY0CfDv9Y=
+
+Name: com/dukascopy/indicators/TrixIndicator.java
+SHA-256-Digest: Bp87LbQmy/oPbFiU0yqrugFY9SKHw2j39YUnKCs89jk=
+
+Name: com/dukascopy/api/drawings/IScreenLabelChartObject.java
+SHA-256-Digest: jEptcjwjEsD3YEulvbber9MLzAGaLUBeJQNZ/hxTqgc=
+
+Name: com/dukascopy/indicators/RegressionChannel.java
+SHA-256-Digest: Pmlf3lrkePlU//xt/t6G7xxRf1cwK08+nh2B+rI6zgo=
+
+Name: com/dukascopy/api/drawings/IChannelChartObject.java
+SHA-256-Digest: WalXrdHDiYj9PbmZQBMbKXxFn7m5MdNwq4ANJSfzKq8=
+
+Name: com/dukascopy/indicators/StochasticIndicator.java
+SHA-256-Digest: ziJZxhF4zAIMrgvpMIFVhObH9+hWisF6CXLTD5ezbnY=
+
+Name: com/dukascopy/api/indicators/ColorListDescription.java
+SHA-256-Digest: zdSgky0IE8FZKy4/iryyhO3Zho/f9Vk3EORTdHeGmA4=
+
+Name: com/dukascopy/api/IFXTimedSentimentIndex.java
+SHA-256-Digest: yILQBUT44FUFaSJ0bpeZzRrlbZlJXIRCe+zF2FaVdQ4=
+
+Name: com/dukascopy/indicators/RMIIndicator.java
+SHA-256-Digest: NIWA17R4Hx5Dx2svyuO1vx+VfxYzDV31ikYaMwbvUjE=
+
+Name: com/dukascopy/api/RequiresFullAccess.java
+SHA-256-Digest: GMKF19nKaZ/4bLfBsWNzndrmOJfUvprp0N3JNuyB1EQ=
+
+Name: com/dukascopy/indicators/WallabyIndicator.java
+SHA-256-Digest: bAecDiDViJ13/e/9StFb0SKYQHDz0xGUxc3I1MaXR/U=
+
+Name: com/dukascopy/api/OrdersLoadingListener.java
+SHA-256-Digest: wRtYxTYp/AsXHZ0n3Rs+Md/UF1BlN8l+Jglf3Zg9W2o=
+
+Name: com/dukascopy/api/plugins/IPluginContext.java
+SHA-256-Digest: mnfNqXzvYm0/p+cZsgeq0Kl7xdT0Vy8cPT1ckprzBjA=
+
+Name: com/dukascopy/api/system/IClient.java
+SHA-256-Digest: IouaIKPD71J3163IU7AAx6nkNtjlmEwA/L+kRt7ql3Y=
+
+Name: com/dukascopy/api/feed/util/TickBarFeedDescriptor.java
+SHA-256-Digest: ualAalFeTOCrx1LHAvitFSrDpZ5sAKcbDRAw88HU/do=
+
+Name: com/dukascopy/api/feed/ITailoredFeedInfo.java
+SHA-256-Digest: NwD1MLWcbyz7s94Z85O6POzEbB0GOLfK5pqdW6v+EO8=
+
+Name: com/dukascopy/api/drawings/IEntryOrderChartObject.java
+SHA-256-Digest: PNdwl9c9OYHcK94PzlsOdaNPQinquIm23KbJpC9I14A=
+
+Name: com/dukascopy/api/feed/util/PointAndFigureFeedDescriptor.java
+SHA-256-Digest: YJmhl34Zs8jgGU8g5/5V9B3a14qENOzx1ALJ+yuT2DY=
+
+Name: com/dukascopy/indicators/StollerAverageRangeChannels.java
+SHA-256-Digest: KBi5Rx+rDF29w3RPb9sdj4+5cj8kBrrgHiJoBB0G0Cg=
+
+Name: com/dukascopy/api/feed/IFeedInfoProvider.java
+SHA-256-Digest: WrOWaLLB3DHOwqr9n1OiM+09sN7hbfFH4TFjfu/K/5w=
+
+Name: com/dukascopy/api/plugins/ui/JFPresetsPanel.java
+SHA-256-Digest: 1LIsDX6GLeH1LD7i5/edMOG0MC05ECux0m2A2hiUaT4=
+
+Name: com/dukascopy/api/feed/util/RenkoFeedDescriptor.java
+SHA-256-Digest: tVYAN0Q3FB9JLatPLYHuc5cjBrU4q4Rw7kw9iKsHyQY=
+
+Name: com/dukascopy/indicators/RSquaredIndicator.java
+SHA-256-Digest: SmXpUjbhQSWI1/ZfB0vY7O3ujmbkm5YiVjpp2x8OAE8=
+
+Name: com/dukascopy/indicators/PercentBollingerBands.java
+SHA-256-Digest: AMHmdl9Jevi8dbigm4Ei5HzxM1ZDXXnFXjaGIp1a5Vc=
+
+Name: com/dukascopy/indicators/MAVPIndicator.java
+SHA-256-Digest: +5WpLa/YXoaIBCKvwTQA1rp4RwA8C4EygVy/YBr15o8=
+
+Name: com/dukascopy/api/ISignalsProcessor.java
+SHA-256-Digest: +u87Z2TQ/uH1jlK54l1oEnGztH5T1/6SGQJS3Tfv7VI=
+
+Name: com/dukascopy/api/drawings/IVerticalLineChartObject.java
+SHA-256-Digest: nJcqQVs2Gr3+axm2EAYEywuCVahk/CAZJG6W8u9EJGs=
+
+Name: com/dukascopy/api/plugins/ui/JFComponent.java
+SHA-256-Digest: TPy7XrSdKFykRYY8ORcKl5+o20J3h8NQxRMtRBGUlCY=
+
+Name: com/dukascopy/indicators/VolumeWAP.java
+SHA-256-Digest: w+8jQtyijU6TMFnNMP41M485uFfRIZzaeYLmyqs7Fx8=
+
+Name: com/dukascopy/indicators/HMAIndicator.java
+SHA-256-Digest: M3IsBdvwPTwhO1F4WKl7jnHak+Nj8U1YYryNya1ZtlE=
+
+Name: com/dukascopy/api/drawings/ILongLineChartObject.java
+SHA-256-Digest: XK2ZUJeD6ceuI4Gtvq5Ml0V88VqaWfcyppcHgy9Wbuo=
+
+Name: com/dukascopy/indicators/DMIOscillator.java
+SHA-256-Digest: zSEZ61egDujGzTahDQVUGmmxP2n07BCoN9zUnQXsHnY=
+
+Name: com/dukascopy/api/drawings/IFiboTimeZonesPercentsChartObject.jav
+ a
+SHA-256-Digest: RsAEHYzmb3ao8P2hCacOL8trSOp7/e0QloePvIlarr0=
+
+Name: com/dukascopy/api/system/ClientFactory.java
+SHA-256-Digest: L1fZDZbTelYYWvaipu4GZ5I1QY0yyWUSyxfbv3z5L9g=
+
+Name: com/dukascopy/api/feed/IRangeBar.java
+SHA-256-Digest: 1ZjrxA1FmspzVQi5YEj3qR8a1/mTnRHocmTLCwJKGu0=
+
+Name: com/dukascopy/api/IUserInterface.java
+SHA-256-Digest: D8dBGeUIxZFVmlfyaMvhAmiRkTXiW07aePQ/ipwzOkc=
+
+Name: com/dukascopy/api/drawings/IFillableChartObject.java
+SHA-256-Digest: lRuOLnZwtD4WOq4LfqjLD71jc7pTHyp4KV5gT37KGAU=
+
+Name: com/dukascopy/api/IJFRunnable.java
+SHA-256-Digest: c5rIs0doXgV72Rje8JXkLVbyUYyeH3Q2CWxTjuOZ050=
+
+Name: com/dukascopy/api/indicators/IDrawingIndicator.java
+SHA-256-Digest: p7zr+u/pF9ctaPqot7SiCBfvGFG+Ayf2RytlB4UXuJM=
+
+Name: com/dukascopy/indicators/TD_Sequential.java
+SHA-256-Digest: 1u8+A0L5yVqxVc2WKkRHdVtN9mzmrHMLXirl48uHod0=
+
+Name: com/dukascopy/api/ConsoleAdapter.java
+SHA-256-Digest: 6xgwE0VdCC3/Wd6GGKItY6aEyYJ66+wa3bHwcgLmuAc=
+
+Name: com/dukascopy/api/indicators/OutputParameterInfo.java
+SHA-256-Digest: Kj77W0jBZqmud/zg9uKjM5Mx/NV4eshsLK4i79EggNo=
+
+Name: com/dukascopy/api/instrument/IInstrumentGroup.java
+SHA-256-Digest: Zxvlh5i57WwcRBoLXQBlHPwJikG0f093dHPGehdUnHw=
+
+Name: com/dukascopy/api/IIndicators.java
+SHA-256-Digest: iSvQYDjE0bB21yxmqUaJgU+XeyPA9XEKStXvtSgjaHM=
+
+Name: com/dukascopy/api/feed/IFeedInfo.java
+SHA-256-Digest: IHq+AvtCgkNFBV/59lx8ynqlnLdkveFY5hyEpPR7YHI=
+
+Name: com/dukascopy/api/IStopLossLevelChangedMessage.java
+SHA-256-Digest: zKNJkZSg6mb9yfNvlwJxXIKR+xGxO06iahVJtTsdEVE=
+
+Name: com/dukascopy/api/indicators/PeriodListDescription.java
+SHA-256-Digest: t8+CQZuU0MB5t/S5rc8/juVG5GOY9Yygo29xHP0+r+Q=
+
+Name: com/dukascopy/api/Instrument.java
+SHA-256-Digest: NfR+J/Y/88cpfjg0JRFdFWENKPfV9+tCJke89Hf41g0=
+
+Name: com/dukascopy/api/drawings/IPolyLineChartObject.java
+SHA-256-Digest: d/ef2R8NyMphwIj9f8cD9KHIrQn/sRppe01YCn7it8Y=
+
+Name: com/dukascopy/indicators/InertiaIndicator.java
+SHA-256-Digest: 5ddV+7GokC6bEb0Cqbawnh6jSCMACd0DZiIK+SOAgHg=
+
+Name: com/dukascopy/indicators/IchimokuIndicator.java
+SHA-256-Digest: ueY4c9iRWA8OJ5vRm3zkFiEVcegENaMzWfAdXaxtGBM=
+
+Name: com/dukascopy/api/plugins/ui/UIFactory.java
+SHA-256-Digest: AMxaCRElgS/6Aunss4nDKtUMjtkFHQ9mNH9BdqX3a80=
+
+Name: com/dukascopy/indicators/SmallBodyCandlesIndicator.java
+SHA-256-Digest: GfaE4nyyvqh3u3fn8rseO0z4OMffUQHiWjfZ8LJj1jo=
+
+Name: com/dukascopy/api/feed/ITickBar.java
+SHA-256-Digest: qXayv7SzIdzVAnFiRhhBWZCh0NKrmKM20j7nE0cY8iM=
+
+Name: com/dukascopy/api/drawings/IFiboFanChartObject.java
+SHA-256-Digest: 5JcVUPQ2QuHPJC7+pqrXqr+F3fFAdOWX4oJzPFyBoM0=
+
+Name: com/dukascopy/indicators/StochasticFastIndicator.java
+SHA-256-Digest: WpLy0EiBhCqERAXIG0tkD40+1OnDI941QLpCzYrPsG0=
+
+Name: com/dukascopy/indicators/PriceChannelIndicator.java
+SHA-256-Digest: sfCe7W9ljCaWBvoKPR2L1CYaAjgdsGR3NehHwdewxTE=
+
+Name: com/dukascopy/api/IHistory.java
+SHA-256-Digest: 2SyTQSR6KkMDhYg1B9MYT+padZ/pkkiu8RjUZyZ+suI=
+
+Name: com/dukascopy/indicators/RCIIndicator.java
+SHA-256-Digest: oWy/9tYVaJgiH7R/Q8Zg3YAbbmJjDcLb70at9nqbaLk=
+
+Name: com/dukascopy/indicators/MassIndexIndicator.java
+SHA-256-Digest: MyLrgNY1u2+4ER3C67E/c1Crc5xmgC1MfxDoRjU7ixc=
+
+Name: com/dukascopy/api/util/IResponse.java
+SHA-256-Digest: 8iyAbXR3L5PuD+GdmVEjSpIL9gIYBgIRriefbsR1QQI=
+
+Name: com/dukascopy/indicators/StochasticRSIIndicator.java
+SHA-256-Digest: Kbce2o6lmmfPQyuCMRQxOF8GbEIcZ9xlYHiSlQcGp68=
+
+Name: com/dukascopy/api/feed/CreationPoint.java
+SHA-256-Digest: kKClvzZxbmPaWa6IYDlXQKAmU4SU27RUByDXtkum+Cw=
+
+Name: com/dukascopy/api/util/DateUtils.java
+SHA-256-Digest: cAoYAM+RAKErFdJRZ0CRmEOnaqVfNxvz6orHwEKv0Ns=
+
+Name: com/dukascopy/api/indicators/IntegerListDescription.java
+SHA-256-Digest: ARq/pO00zd+BpvpyEReTaxzr8TPeJ/W7C1T8v2v3QSA=
+
+Name: com/dukascopy/api/feed/IKagi.java
+SHA-256-Digest: 9F226M6ne718N3b9gSwkj0Vl4uAPYWDkmvd9nINMAYs=
+
+Name: com/dukascopy/indicators/KamaIndicator.java
+SHA-256-Digest: z44Js88t2If9hQl6tx7655/teHAxZ4vpSiE8ghpQ228=
+
+Name: com/dukascopy/api/plugins/ui/JFButton.java
+SHA-256-Digest: uYJaephWBqvdkCRTOgv2pH4u3lBQPs0OmH7K4ek4ckI=
+
+Name: com/dukascopy/api/IFillOrder.java
+SHA-256-Digest: rKibnoczJg9H7EkIn385gRoS8mYdky2bcwnpb1agiiU=
+
+Name: com/dukascopy/indicators/VolumeWAP2.java
+SHA-256-Digest: 1Yd/5FZ/iAUbYUi6jK+WhQsFT8QflYjwY3U03ekJXgg=
+
+Name: com/dukascopy/api/drawings/IOhlcChartObject.java
+SHA-256-Digest: b1/hSEBjvP4HjttvBbZ3/9M7jl2BXQBp3RxlG+87+/E=
+
+Name: com/dukascopy/api/drawings/IDecoratedChartObject.java
+SHA-256-Digest: hL1/WLiwXeXuqo7xiigJTLKPw2aMGhRsBlvMxqW4mPY=
+
+Name: com/dukascopy/api/indicators/IStopListener.java
+SHA-256-Digest: BAuA2xkLFfDYBj2hD0zh+mfbmnbdjYpxLcXqvxb/wzc=
+
+Name: com/dukascopy/api/indicators/IIndicatorChartPanel.java
+SHA-256-Digest: QYW1ICr8oEGO8U//5T+uRWsa1wYSugFzGs5Kp0lz1Rg=
+
+Name: com/dukascopy/api/feed/DataInterpolationDescriptor.java
+SHA-256-Digest: jGXzI1OtjmyYdDNMmVAEPuF2QduFOa2gM4GMiWjDyhU=
+
+Name: com/dukascopy/api/chart/mouse/IChartPanelMouseListener.java
+SHA-256-Digest: VnmCO0V3VAH3OIWCdQs98oFcB8miKwnaLsQmyna8+GQ=
+
+Name: com/dukascopy/api/drawings/IRectangleChartObject.java
+SHA-256-Digest: SS2LQR//39d4KjnuSyDUdC9jBvtLMeAMAZg3p6kMXlE=
+
+Name: com/dukascopy/indicators/ChoppinessIndexIndicator.java
+SHA-256-Digest: FeUA+CMcQDxsE06MxPzmS4g9WwPuSupE7ZygiCM3h9c=
+
+Name: com/dukascopy/api/indicators/IndicatorInfo.java
+SHA-256-Digest: h7LVMIOUr5DEO/iTddI3hNTZSGq2CAN1bw0/jQTCDN8=
+
+Name: com/dukascopy/indicators/TrendOscillator.java
+SHA-256-Digest: 3RY56TJLiU4fUiBVgaWgfcYwJd43jF/Y1xuVPjtFlZg=
+
+Name: com/dukascopy/api/system/JFVersionException.java
+SHA-256-Digest: SFTV4jj+RGPcozDIcE54X4aOm7gjmptU1ZQbHe32n/8=
+
+Name: com/dukascopy/api/strategy/IStrategyParameter.java
+SHA-256-Digest: Fp6iL5TGXlAK22L5Krs6wQe5Qg3g8yPeKPx9P4JgaIE=
+
+Name: com/dukascopy/indicators/McClellanHistogram.java
+SHA-256-Digest: L+JzCyxFHucRvg6tm1Mzp/PwSBAkHtpyHIlivjWqsBM=
+
+Name: com/dukascopy/api/Configurable.java
+SHA-256-Digest: bitHm2E8DTupYPKGbTT836OkAokId0fNQJaxvpPjvrg=
+
+Name: com/dukascopy/api/indicators/IChartFinancialInstrumentsListener.
+ java
+SHA-256-Digest: 0/LdfmVpsRRYqIpm5vOIKjuXG5DdHzStV4Xus7WDmcU=
+
+Name: com/dukascopy/indicators/TrendTriggerFactor.java
+SHA-256-Digest: 2NedtOtjL6niH9AJoT/c6h8ImfBLzcugVWaK9AajSKQ=
+
+Name: com/dukascopy/api/drawings/IWidgetChartObject.java
+SHA-256-Digest: 0jN26iy6YjthzpX2HYAhjsKQYGF1tsMpPc1v50OCvZA=
+
+Name: com/dukascopy/api/system/IStrategyExceptionHandler.java
+SHA-256-Digest: yH3hJlBBBJUaXde8Pyz5ctyDYBD4wRo3AvxQmaiSdwk=
+
+Name: com/dukascopy/api/feed/util/LineBreakFeedInfo.java
+SHA-256-Digest: Da2tG3uyrUCowNodRJ7vf86Lib30pFSVXqrAh9YR0ko=
+
+Name: com/dukascopy/indicators/VolatilityQualityIndex.java
+SHA-256-Digest: VhedwkwwKbi4AoEaM4ACgdQZlrLDbew/k/kgLXtLwYs=
+
+Name: com/dukascopy/indicators/CorrelTwoInstruments.java
+SHA-256-Digest: +qdix7u9ca+M+M1u7JBNFTxcBv7iOl8t8yrezPt71zY=
+
+Name: com/dukascopy/api/IFXSentimentIndexBar.java
+SHA-256-Digest: jBgO88P9WtIwD+YTWF21inwmOdp//2u5kinkLJgp4/w=
+
+Name: com/dukascopy/api/LineStyle.java
+SHA-256-Digest: 1S2doFHNahQG1wezIWl6C0Q1LJfi+zU0utYcSYbcwPY=
+
+Name: com/dukascopy/api/plugins/ui/JFComboBox.java
+SHA-256-Digest: 9AS+7mME94LOjqCZjMdgezfCKr2laRaJknDhmnw8ocI=
+
+Name: com/dukascopy/api/plugins/ui/JFMenuItem.java
+SHA-256-Digest: +iwyULbKXhJirj776/2aF4IW2VMJo0ADqWHOVQjB3vg=
+
+Name: com/dukascopy/indicators/SchaffTrendCycleIndicator.java
+SHA-256-Digest: ocIm6niid3trJXQ9C9necgO1rl5ov2ButkUw8REQHsU=
+
+Name: com/dukascopy/api/ChartObjectEvent.java
+SHA-256-Digest: 4Fuy8GMfthTJMPI5C2DTHnUiVX6eZJ2AEUjcbxYdpaE=
+
+Name: com/dukascopy/api/IClientGUI.java
+SHA-256-Digest: CxesHQJZ+AEKifW8Rb3pynzWhAISkcvdMLhQUjlvcgY=
+
+Name: com/dukascopy/indicators/pattern/TripleTopPatternIndicator.java
+SHA-256-Digest: /IR5H1s/8YjZzOTLnDuYZ3SlY5ozc60NuRp4z37zqEg=
+
+Name: com/dukascopy/api/plugins/ui/JFSlippagePanel.java
+SHA-256-Digest: llgZNPuIgYW4PQfIhQqfHC0mRGakCxehJWACG+8CepE=
+
+Name: com/dukascopy/api/feed/util/KagiFeedInfo.java
+SHA-256-Digest: 6j2rUkdLZglvNBQ/ikKVEyTpXACvmvIlKsqvlhrLbVs=
+
+Name: com/dukascopy/indicators/TrendIntensityIndex.java
+SHA-256-Digest: jzUtOsVd28IoPdwAOxeT6UI1JHuDcrYcvX1245OV4VY=
+
+Name: com/dukascopy/indicators/McClellanOscillator.java
+SHA-256-Digest: 2F8EVnxxKq2lSdOJaRANCS3Fx6s3pG1pLXwfDoJxMOo=
+
+Name: com/dukascopy/api/system/Commissions.java
+SHA-256-Digest: CCv/+VF63xdZ0ZaYQsYtOaGBB01MeLSCIQ1cvHk5LP4=
+
+Name: com/dukascopy/api/drawings/IShortLineChartObject.java
+SHA-256-Digest: 5V8CGDCvf6r5Ft7HDAkgStZ3WOZAuWvW0U7+mNJjU7w=
+
+Name: com/dukascopy/api/LoadingOrdersListener.java
+SHA-256-Digest: 39NsgoQk4xGepeJfNrRad9c1Qb0x55Ehyh6OZv3UIyQ=
+
+Name: com/dukascopy/indicators/ACIndicator.java
+SHA-256-Digest: wZFxKFWLJW1LZvRFdxvZgzwIgMTwJd4w/DRGqkbPAFI=
+
+Name: com/dukascopy/api/indicators/IIndicatorsProvider.java
+SHA-256-Digest: B4wNKnLGCKKhdsJH/UdkpXsQWcRlaX5l77tHsL6rarA=
+
+Name: com/dukascopy/api/drawings/IEllipseChartObject.java
+SHA-256-Digest: bhJC8jVM2oWP1CX3H3qNbYhVhxZx0eeof3fDlFe55rc=
+
+Name: com/dukascopy/api/feed/ITailoredFinancialFeedListener.java
+SHA-256-Digest: BTNBtgi8553y6CdKLz7O2xyqelKaDeqKsLYcJS55GyE=
+
+Name: com/dukascopy/api/IClientGUIListener.java
+SHA-256-Digest: USp1PCElYuUgHUxQXaP+eiAanVsl2YlVf9vOWU8vKTc=
+
+Name: com/dukascopy/api/feed/FeedDescriptor.java
+SHA-256-Digest: 5wKsi8GBtFbEEb7hAWz7l50v0nHz3jI3LX3nb2pbUJs=
+
+Name: com/dukascopy/api/instrument/IFinancialInstrumentProvider.java
+SHA-256-Digest: E09B5zqNIPTXoSSAnvj6vUrut4TiAkVkR6Cl2dqls6Q=
+
+Name: com/dukascopy/api/plugins/ui/JFTextField.java
+SHA-256-Digest: bdYOZVbbG2vObJ+0s+4dnl55gfzHT+LV5T5xZwvIjWI=
+
+Name: com/dukascopy/api/feed/util/RenkoFeedInfo.java
+SHA-256-Digest: MMJSXx1qXbW/GBan+YFZLEv+Uc37z4JohXSDHHplDq4=
+
+Name: com/dukascopy/api/IDownloadableStrategy.java
+SHA-256-Digest: EXf+HWTPmisOuKE+fYXgL4iJhjG5p0Hve0TVvzryeYs=
+
+Name: com/dukascopy/indicators/AlligatorIndicator.java
+SHA-256-Digest: EEl78ATyOercC7U5Kf9c6REres9m1OuW3JiwdtEYVlA=
+
+Name: com/dukascopy/indicators/KeltnerBands.java
+SHA-256-Digest: kS2Bb7UDyHuxskXSOoe9RAy5fLkRoCeFX6FusWZjbV8=
+
+Name: com/dukascopy/indicators/MAXIndicator.java
+SHA-256-Digest: +6MQ0uod147TL3EbYPfzaOXR9FHdJfnMirT8ftT9n4Q=
+
+Name: com/dukascopy/indicators/LaguerreACS1.java
+SHA-256-Digest: gEodjYYTxfw4lPc/uBIwE6qy78JPOu69TBfDe/BvvHM=
+
+Name: com/dukascopy/indicators/EhlersFisherTransform.java
+SHA-256-Digest: Go2GrdB3CiTOKDFQVaOOakL+uc9fUvYs4voiYmeKKyk=
+
+Name: com/dukascopy/api/strategy/IStrategyDescriptor.java
+SHA-256-Digest: hI7cNwcVEkb03198welFruRj5M/1EU8prucG+EfiTjk=
+
+Name: com/dukascopy/api/system/tester/ITesterParametersForVisualMode.j
+ ava
+SHA-256-Digest: zwyqQc0Va4t3Vx6CndNA3GolshAqiVy2n/GaM0bbTq8=
+
+Name: com/dukascopy/api/NewsFilter.java
+SHA-256-Digest: Eh6yoD4depxyORXKw+JfYXD7KB53M15pzcuW7WfzpoE=
+
+Name: com/dukascopy/api/feed/IRenkoBarFeedListener.java
+SHA-256-Digest: QCHBHuyLbRtOi1f8rAHb+ANQemXa3x2fQqPaSFIM/I8=
+
+Name: com/dukascopy/api/strategy/IStrategyManager.java
+SHA-256-Digest: cFH8bPy2q/1DlDQ+1H1R/IvRq9cFTjUm8VVp4xCeFoo=
+
+Name: com/dukascopy/indicators/Pivot2Indicator.java
+SHA-256-Digest: nyBVTCIOhAIdH+eB9MmXsE8QBE35vkXa68Mr+VgSO/I=
+
+Name: com/dukascopy/api/system/tester/ITesterGui.java
+SHA-256-Digest: HDnitDda9l6kq0oGpDqshPhXS1c7jYdHzkRbjbMHHsY=
+
+Name: com/dukascopy/indicators/patterns/ThrustBarPattern.java
+SHA-256-Digest: H+fpYNfqjj/htTulZgaN39Hpe5DlssSE80ZvUr7cPos=
+
+Name: com/dukascopy/api/feed/util/TickBarFeedInfo.java
+SHA-256-Digest: HtAJjtUyLPILyz7vKdlPHGHSTUic9/l8kLoDZ6Kpb+8=
+
+Name: com/dukascopy/api/drawings/IGannGridChartObject.java
+SHA-256-Digest: 9bcuMI4LdIZod+GaWxg0usA8LBdVNduoo4CND01pn6Q=
+
+Name: com/dukascopy/api/plugins/ui/JFToggleButton.java
+SHA-256-Digest: 3BIw5a7Aqm1wNSYp6yv0oSIZFgDy7OYus/7802UAkbA=
+
+Name: com/dukascopy/api/indicators/IIndicatorCalculator.java
+SHA-256-Digest: ZDnMap9IBKHntEuOaFd7LnhK8tVlGiSyQwhlYtFKgDc=
+
+Name: com/dukascopy/api/chart/mouse/IChartPanelMouseEvent.java
+SHA-256-Digest: EKCKxcN2R/Nc+Wp3AoGoZykfAhAqyub7l6PR1lBGK+U=
+
+Name: com/dukascopy/api/drawings/IFiboExpansionChartObject.java
+SHA-256-Digest: 7A1m8i1OpU3Dl21JdiB4NOTEXgnf/ZIK1S2RzWkZ/I8=
+
+Name: com/dukascopy/api/feed/IFeedListener.java
+SHA-256-Digest: pSqB4gzVx2eqngGuSJMQ96j0ka3u6HwU+1NO5/N7Hpk=
+
+Name: com/dukascopy/api/strategy/remote/IRemoteStrategyManager.java
+SHA-256-Digest: YjwBNjbi6ORPuEM1rO5xd2TA86is5UoI+s8UeU65w/8=
+
+Name: com/dukascopy/api/drawings/IHorizontalLineChartObject.java
+SHA-256-Digest: 6N9ubs6ESFiWSruzzJw+59UtMwcJrCOTLBChleM6yFk=
+
+Name: com/dukascopy/indicators/ElliottOscillator.java
+SHA-256-Digest: /6VC/2VPThuIajzyJITNJFd4tr28TG4BAqO3n8LN6hU=
+
+Name: com/dukascopy/api/feed/IFinancialFeedListener.java
+SHA-256-Digest: +eV66ISw/AF36NZWgSZx41otm0i8lcFgAkXEG14Voyo=
+
+Name: com/dukascopy/api/ConfigurableChangeListener.java
+SHA-256-Digest: Lwn9ymzYejF3P12Z6+WhckLVgXpwLhKNuiBlFkvOH6g=
+
+Name: com/dukascopy/api/plugins/ui/JFCheckBox.java
+SHA-256-Digest: dY32gmKo/0Im8JH4o9fBWkLoGsd6jFMpJA3FssANcLQ=
+
+Name: com/dukascopy/indicators/pattern/AbstractChannelPatternIndicator
+ .java
+SHA-256-Digest: UvT+txG2ZxUa/gbuWNCNcSwbkjIfWk57x66vLF18wMU=
+
+Name: com/dukascopy/indicators/GannHiLoActivator.java
+SHA-256-Digest: WZDFexkswQAi/AT+DKAbC7pO1AoFHshBeLELembew9w=
+
+Name: com/dukascopy/api/plugins/PluginGuiListener.java
+SHA-256-Digest: U6rKP8akxFo0CL+gVQ7Nw8w9tMfQ2/4eE0vIX1ai1Qk=
+
+Name: com/dukascopy/api/CalendarFilter.java
+SHA-256-Digest: xkzgdSnAOOcIXxLaNEw04+JQ9/YzjWyIpjk5LkiNTe4=
+
+Name: com/dukascopy/indicators/SUMIndicator.java
+SHA-256-Digest: cLo9j50q5QFBchsl+nXZFjVLdyTFFDnWxIS+I7MVWqM=
+
+Name: com/dukascopy/indicators/ChandeTrendScoreIndicator.java
+SHA-256-Digest: rlMrDDbStDi4egu+gKP4IoxJKyXEWz7CrDAtx1qND2g=
+
+Name: com/dukascopy/api/plugins/IMessageListener.java
+SHA-256-Digest: xyRoQ7WSNBqzlj2qqE5XUNN0fKUnBizjEQQ7geIxiAY=
+
+Name: com/dukascopy/api/IPartialOrder.java
+SHA-256-Digest: 1qdOgwMGOkgjVbaRu7VF4y5tzXYsi3Ev94SaOv4sN+8=
+
+Name: com/dukascopy/api/system/tester/ITesterChartController.java
+SHA-256-Digest: YJWLBTSdWDAt+ULoCZKJJMOfHDTZ3QDWbPMYakRmy2o=
+
+Name: com/dukascopy/api/feed/IBarFeedListener.java
+SHA-256-Digest: zG3svGwjHGVFQ5zyLPSi/qr2Lj7zasXRCTZUbT9kYag=
+
+Name: com/dukascopy/api/system/tester/ITesterIndicatorsParameters.java
+SHA-256-Digest: HL34B/Mo92uG9SX5XcZ4BcRIq3L9q/YsLFqLidjZXXM=
+
+Name: com/dukascopy/indicators/pattern/HeadAndShouldersPatternIndicato
+ r.java
+SHA-256-Digest: 40rHhaUkUElC321cUd00mz/suaGW2acgd5lISyvhKRo=
+
+Name: com/dukascopy/api/strategy/local/ILocalStrategyManager.java
+SHA-256-Digest: TBpI3fZQuHJP3Rwk8k3Gf44PdDJnkEW9moJcx971cso=
+
+Name: com/dukascopy/api/instrument/IMarketInfo.java
+SHA-256-Digest: BcZt2lgKn5oQS+o7w6pbyk8KWUAw7hi02l40Ps3IgR8=
+
+Name: com/dukascopy/api/plugins/widget/WidgetProperties.java
+SHA-256-Digest: TuSqplUuylX4QkKO2uoTW8RLf29Dx/Q0Ee8KB5mreAY=
+
+Name: com/dukascopy/indicators/pattern/DescendingTrianglePatternIndica
+ tor.java
+SHA-256-Digest: zv/5l6pRYt8rWxyAGLeKj2+4FilPeHny3vhfYF2UIXY=
+
+Name: com/dukascopy/api/IStrategies.java
+SHA-256-Digest: ITuWyjGOEdXjz8/gvTBjam0bxYt5Q+tr7WuOLUX9YS4=
+
+Name: com/dukascopy/api/ICloseOrder.java
+SHA-256-Digest: 5qK7kRwyjQMRq3SmiB8k5wgFQwhZ108dcfgB7bSLhEc=
+
+Name: com/dukascopy/indicators/KaufmanEfficiencyRatioIndicator.java
+SHA-256-Digest: ItEm+XtQFQMXqvy8m/uIXiXqfj6PmhvRT4UHHKv0KeQ=
+
+Name: com/dukascopy/api/TickBarSize.java
+SHA-256-Digest: YjtDcMovQ72TRKxZqrhVgB4uMRzp87lp4QK0odOO83k=
+
+Name: com/dukascopy/api/feed/CalculationMethod.java
+SHA-256-Digest: c7e9eWWFpODN0FGNEm2fPkWlAlAc1NQUNJvc7R+Abn4=
+
+Name: com/dukascopy/api/system/tester/ITesterVisualModeParameters.java
+SHA-256-Digest: 64NcrdqbUvmvDjQtVbsuE1vqmMd9e1/Akpk9Oq39Xeo=
+
+Name: com/dukascopy/api/drawings/IVolumeProfileChartObject.java
+SHA-256-Digest: z3K7aSeuelU2Htq6oWWTfhmbO1pDZC1B5HxNM65KHbM=
+
+Name: com/dukascopy/api/feed/IPointAndFigure.java
+SHA-256-Digest: gkXOU8y9DnEczRWElgjwSVm0DC9O6HoWXJUTnhtzDIQ=
+
+Name: com/dukascopy/indicators/CamarillaPivotIndicator.java
+SHA-256-Digest: UEPhhS7MO4s49UFPlPM+MJe8KF1TuEsEvOIvYKk/kks=
+
+Name: com/dukascopy/api/JFXInject.java
+SHA-256-Digest: UeuA164fJxd1zPRgR34QgXZ3mBZUq6AiH5sdT8tR0Jc=
+
+Name: com/dukascopy/indicators/patterns/ThrustOutsideBarPattern.java
+SHA-256-Digest: s409F4V53O2lfrAfBm7KjXfmH/4JpNCWd7Gy/HZQ7gk=
+
+Name: com/dukascopy/indicators/pattern/InverseRectanglePatternIndicato
+ r.java
+SHA-256-Digest: BmOBZoJdUi9fphXhi3CVW5y98Y78JHRaCzHyIApOPlk=
+
+Name: com/dukascopy/api/system/ITesterEvent.java
+SHA-256-Digest: svVN+e9vuG/pp2ASI0NOv5a1BLJPxQD1k4bFQLJJIaE=
+
+Name: com/dukascopy/api/JFException.java
+SHA-256-Digest: Xd3OFdnBXbkezC25+jv0g1W+ZkwngdZVyV+zX/Nn2LY=
+
+Name: com/dukascopy/indicators/ChandeRangeActionVerificationIndex.java
+SHA-256-Digest: 1d/GAeku4prN8TwRmDxEtedDEiyGdWEAkc/ZKtqDHeA=
+
+Name: com/dukascopy/api/IDownloadableStrategies.java
+SHA-256-Digest: upfv9Z3lbBjdpWRbCNprdH/kgyrmtd6WyBobObd84WI=
+
+Name: com/dukascopy/indicators/DisparityIndexIndicator.java
+SHA-256-Digest: unMJ7L61fROJx1YJ6AKt0FBcqrBnGqaXr7qeKyortM0=
+
+Name: com/dukascopy/api/JFCurrency.java
+SHA-256-Digest: X2YOELzc7s8c2eoQ+WlmHQvivTPTRR7tvecPAIfFeao=
+
+Name: com/dukascopy/api/IFXSentimentIndex.java
+SHA-256-Digest: DjMzrdAnVfZlMD0DdB4bhEL5ErnZuiznVFELIoK8Am8=
+
+Name: com/dukascopy/api/instrument/IFinancialInstrument.java
+SHA-256-Digest: JfrITSdc/kRLccb05irNupOaHdtR9oNu7147IvvGrHA=
+
+Name: com/dukascopy/api/system/tester/ITesterDataInterval.java
+SHA-256-Digest: cy/AfAzOoZLz48yKpXSXXiyHiqgBoH6MX1Apl+4gQjk=
+
+Name: com/dukascopy/indicators/SMMAIndicator.java
+SHA-256-Digest: p7eP30r0T2FRLbi2WyRIC3oEGjuTSMYYb18Nf00XJ+g=
+
+Name: com/dukascopy/indicators/BollingerBandwidth.java
+SHA-256-Digest: oIIKjg1G3bbKacQClnY0dutJJlReiQIXldlklxlUfnM=
+
+Name: com/dukascopy/api/plugins/ui/JFScrollPane.java
+SHA-256-Digest: tCVkHwRTAhvtysFTYl5BES8xuYDoaoYK5DgSlJ8cxmY=
+
+Name: com/dukascopy/api/plugins/ui/JFPopupMenu.java
+SHA-256-Digest: njowKkYBu7Pa4QrC3/KkA9VAtPNa9YhqNUckHf3wuqY=
+
+Name: com/dukascopy/api/indicators/IndicatorResult.java
+SHA-256-Digest: 4XmQ68Y6dI60n2fmmKhpe/L/UZslF7uBUlRkTnkSXc0=
+
+Name: com/dukascopy/indicators/SupportResistanceIndicator.java
+SHA-256-Digest: ly+VmBoRZalxP0wp/QRHrronKP/+bHEGfHBMkbRLO1k=
+
+Name: com/dukascopy/api/IChart.java
+SHA-256-Digest: haAyib9PTf3Y2Fod26hnTwDYgJTmleaKxum0IbrRfEY=
+
+Name: com/dukascopy/api/feed/util/LineBreakFeedDescriptor.java
+SHA-256-Digest: Uqf8FGYEJOrQJai0Uu/DN/cW4gapJKmx4rpFirRhqFs=
+
+Name: com/dukascopy/indicators/CenterOfGravityIndicator.java
+SHA-256-Digest: f43fJMeNSFl6fchXLO4js+9R5q55/lcRJAVc9QE9Mms=
+
+Name: com/dukascopy/api/plugins/ui/JFNumberSpinner.java
+SHA-256-Digest: F1Nv7Fx6aMTVSleH+7pweFjYCFZ8V4xxRuBOOOd0RcU=
+
+Name: com/dukascopy/indicators/TrendContinuationFactor.java
+SHA-256-Digest: ani0jX+CbXcWi/UuKRa7OLrkbZi0DtETZ5kkkTEWMc8=
+
+Name: com/dukascopy/api/indicators/IIndicatorContext.java
+SHA-256-Digest: PDVdqLJ7y6R6fFg8RlFFw2za3Vg7CBYN053atWVNuOM=
+
+Name: com/dukascopy/api/indicators/IIndicator.java
+SHA-256-Digest: mY5rghlA0tJ2XSU3h0BAdODa3d+kznqna2LB+SoZNqQ=
+
+Name: com/dukascopy/indicators/pattern/TripleBottomPatternIndicator.ja
+ va
+SHA-256-Digest: Fih+OoAjvT7+7OyIRnN44VMM+ruAmI0rgGtItjnp4hc=
+
+Name: com/dukascopy/api/indicators/IIndicatorAppearanceInfo.java
+SHA-256-Digest: QfG9/siA5xFbqc/0uAe8ldTp0MtmK76mrz5RVzSYl10=
+
+Name: com/dukascopy/api/system/tester/ITesterUserInterface.java
+SHA-256-Digest: Hk9EUW6rYMXfFnso92UasZZpspWYa5YYpLlbBg1CZFw=
+
+Name: com/dukascopy/api/feed/IRangeBarFeedListener.java
+SHA-256-Digest: Umlp2x9Lf+OeXrtiTLroPIoOQsJe1SSI7nqIxgXchvY=
+
+Name: com/dukascopy/api/system/ITesterReportData.java
+SHA-256-Digest: SVF9o2mIiaDxZJLNRaNA8hvhcTI2iTQZYYFkMoZGkkM=
+
+Name: com/dukascopy/api/ITimedData.java
+SHA-256-Digest: oo58ktAqG4iVUdTWUmoOKYB28GG62V8Vlur4DUYWPTM=
+
+Name: com/dukascopy/indicators/pattern/RisingWedgePatternIndicator.jav
+ a
+SHA-256-Digest: Or50uJBxvSt6Fo9s9WU2R4YrMboKPQ1sGYMAaaFry8I=
+
+Name: com/dukascopy/indicators/KairiIndicator.java
+SHA-256-Digest: zrgc37Hxfpc8a4A2805GVHivni/Us/jyix2j61wddbg=
+
+Name: com/dukascopy/api/IDailyHighLowListener.java
+SHA-256-Digest: IS1AiBO7f4ya60fPMeyvpFqB+Y+g1HuDrfaYhvT2mII=
+
+Name: com/dukascopy/api/plugins/PluginProperties.java
+SHA-256-Digest: cXH2kz8MPhXwgL4IpIq4lf9dV/4CnVWFEUwQE0N0cwc=
+
+Name: com/dukascopy/indicators/pattern/RectanglePatternIndicator.java
+SHA-256-Digest: bDzI+WrCea5xCRJaCbyJ27G26oKQKyJJx71qvLhWhW8=
+
+Name: com/dukascopy/api/drawings/IPencilChartObject.java
+SHA-256-Digest: sAlNIjh5Yd2qFtgePMCLufV301pXjZa5ZcaXfQYyui0=
+
+Name: com/dukascopy/indicators/ProfitLossIndicator.java
+SHA-256-Digest: MK8WWVMUFdBceKQvtykfbow0e9ga5/eNLFNAMsDyDyc=
+
+Name: com/dukascopy/indicators/pattern/ChannelDownPatternIndicator.jav
+ a
+SHA-256-Digest: a1CmmHj4ldG/WDsdTLr9GWlu0934YfY69E3fon1g2tQ=
+
+Name: com/dukascopy/api/IStrategyBroadcastMessage.java
+SHA-256-Digest: /N2Ywxhhy24MGbXRsQllyKXZSRhJ/nz1XrQUvPsEcVI=
+
+Name: com/dukascopy/indicators/EnvelopesIndicator.java
+SHA-256-Digest: 8rRVE1+bqpkgMLYBUMFGe+PVsqOdkvYLHk0hvdqdsTk=
+
+Name: com/dukascopy/api/system/IPerfStatData.java
+SHA-256-Digest: QVrIq2Oeg9Cj9cg523R8I5GtcQI5VC1wNi5/ERgUzwE=
+
+Name: com/dukascopy/indicators/MINIndicator.java
+SHA-256-Digest: yIv9eBZitZbMCf1M2kSCQrYj976O6H+fG1Xakr4ONd4=
+
+Name: com/dukascopy/indicators/RainbowOscillator.java
+SHA-256-Digest: 6VK7jViZDIOmcGh0JWoiIeviAQJvsDAes6PB4IHyOAw=
+
+Name: com/dukascopy/indicators/TD_Combo.java
+SHA-256-Digest: otVgHtjf6kQJzdNLGeD2y+lQUvn0+4vwc2DflOyscJc=
+
+Name: com/dukascopy/indicators/GannSwingOscillator.java
+SHA-256-Digest: FD0BzS03OC2g2I09Z7HShC/lv6wKdIJAe1TAlkyGVpw=
+
+Name: com/dukascopy/indicators/ChandeVariableIndexDynamicAverage.java
+SHA-256-Digest: nBEZIzteuKkP/vKHUBsnbrua+m2G8zky4PjZzVm8wZE=
+
+Name: com/dukascopy/indicators/pattern/ChannelUpPatternIndicator.java
+SHA-256-Digest: aXJZ1knip/TAxIFE2BLqqq5c0QIdXDg5cwI2N/AbswE=
+
+Name: com/dukascopy/indicators/HeikinAshiIndicator.java
+SHA-256-Digest: +2/NTnE/jRdcR8jpdVvvL1eXU33TZezQfK1W8Punkl0=
+
+Name: com/dukascopy/indicators/BollingerBandsFibonacci.java
+SHA-256-Digest: gVteEl4MkmxRU5de5iFZDb4247AP/yE7+YW6iywAPlY=
+
+Name: com/dukascopy/api/drawings/IFiboTimeZonesChartObject.java
+SHA-256-Digest: 2EeyBakEFisLB9vNbUPig8Dcc9ZfaIAtMpxYo87RGPQ=
+
+Name: META-INF/maven/com.dukascopy.api/JForex-API/pom.xml
+SHA-256-Digest: /3QmG97QlH5S4041ajtxlBeGhN1PnDjp1lalyMCJhLU=
+
+Name: com/dukascopy/api/INewsFilter.java
+SHA-256-Digest: 06XMZ/1OdJj9K8d9QwPQOtv+ALM3LNHtCSdvnjQ0Ucc=
+
+Name: com/dukascopy/api/plugins/ui/JFPanel.java
+SHA-256-Digest: dBLh73HNCCywh76soTNnkuf5ooQhCksVbgDbP51YBHQ=
+
+Name: com/dukascopy/api/IDataService.java
+SHA-256-Digest: H2giBxYmR6BlcAON7CTWXBVyGwCNEqDUYYr1GO7svTo=
+
+Name: com/dukascopy/api/IMessage.java
+SHA-256-Digest: Fz+vgxMOLgKUUeD03ZM3SLMFFgWV6PjJiHtKy9S4SFQ=
+
+Name: com/dukascopy/api/plugins/ui/JFPriceSpinner.java
+SHA-256-Digest: zNrGNc56eVfk1RQ3A6r95/6ZUZutoxCkGXqHmOr/qfY=
+
+Name: com/dukascopy/api/drawings/IInclinedChartObject.java
+SHA-256-Digest: cXaP1aKb0aqPdnDA2QducwmbVY6RTGhYd20q/eZhWAo=
+
+Name: com/dukascopy/api/indicators/IFormulaTimeData.java
+SHA-256-Digest: yyjf413ki/lpoF4KTFwHyYMEDrmaOj6Zw5rj5Q8DfrE=
+
+Name: com/dukascopy/api/feed/ITailoredFeedListener.java
+SHA-256-Digest: dRxVnx2+EQmUM4MbLDhIjCLwcAEyH9xoY7S7LtVFSvQ=
+
+Name: com/dukascopy/indicators/patterns/MorningDojiStarPattern.java
+SHA-256-Digest: FOEGvJnv/oc8BKEzEPiuaFfntIgXnSeRsEt9GlT9ukE=
+
+Name: com/dukascopy/indicators/IchimokuIndicatorVF.java
+SHA-256-Digest: 4e/3j2LjBlbQnRLwc8XvJhZo9mA/IZc3xsLkG752W3g=
+
+Name: com/dukascopy/indicators/EMAEnvelopesIndicator.java
+SHA-256-Digest: +n73d4ImIl+DO0mehKgQIdrqSQQ+p28YRkCscNWLxbg=
+
+Name: com/dukascopy/api/drawings/ICyclesChartObject.java
+SHA-256-Digest: LuJxDGu8pLxg34xE/xODX51ttlaWNVt+I4NubtyjOjg=
+
+Name: com/dukascopy/api/IInstrumentStatusMessage.java
+SHA-256-Digest: tJj661Aeo+z54fM5v2PgwfCLxv1SdtD5OaeTQYtzyOo=
+
+Name: com/dukascopy/api/IAccount.java
+SHA-256-Digest: p9M0MsAm0asoeG/CUZpqxyRauTG7Ni/r+GKuL2sfF2g=
+
+Name: com/dukascopy/api/drawings/IVerticalRetracementChartObject.java
+SHA-256-Digest: KvGTnqhDJf6ECAdhn1XnYPzmUhT0Pk1qx8VROQWKU9M=
+
+Name: com/dukascopy/api/JFTimeZone.java
+SHA-256-Digest: dieQWVedxW/29tPtAErFvDFBtROAm1g4Asy9/um994Q=
+
+Name: com/dukascopy/api/Money.java
+SHA-256-Digest: nzWI9dNKu5JMmhrIqshnYByLumBBwm4euwak84c/1ro=
+
+Name: com/dukascopy/indicators/WoodiePivot2Indicator.java
+SHA-256-Digest: IwHnf9pCyT65kpnNYZvRDKqbvJ566aXDgYTENQE6mX0=
+
+Name: com/dukascopy/indicators/Awesome2Oscillator.java
+SHA-256-Digest: 9UT8zKNdyhnuhzVkytWKXh2jHpvsl3CzjO0E5kHSw54=
+
+Name: com/dukascopy/api/feed/util/TicksFeedInfo.java
+SHA-256-Digest: x6VOZmDAdt/g1hqV72eSpnK12b1t+7WpaaBiGJHP+ug=
+
+Name: com/dukascopy/api/drawings/IFiboChannelChartObject.java
+SHA-256-Digest: qH19jmOBKkT4wfD0aI72HznfcdMp74sFVie0XIF9lok=
+
+Name: com/dukascopy/api/feed/FeedInfo.java
+SHA-256-Digest: 2XEV+ijcX3tiYAI72NRRkpxZVNCCQrLDA+gg/R75JfE=
+
+Name: com/dukascopy/api/system/ITesterClient.java
+SHA-256-Digest: ot58A7Fa6wnC3HvHQK8pup19aLxNcGDZQUe+YWR02gs=
+
+Name: com/dukascopy/api/PriceRange.java
+SHA-256-Digest: POISWgQOc3XowWoDyyxTq3dtgrO0qfrFp+WrbjER2Yc=
+
+Name: com/dukascopy/indicators/PivotIndicator.java
+SHA-256-Digest: ehdE6J1mquyx7hZHRLqXSPa5W/qHnsWJe8eK2YPbYP0=
+
+Name: com/dukascopy/api/strategy/remote/RemoteStrategyListener.java
+SHA-256-Digest: FWNBuP7npKdmm+AWUy4En2BDNSSuojXx+D27oDVFS0s=
+
+Name: com/dukascopy/indicators/KDJIndicator.java
+SHA-256-Digest: DwfFJXW5qQY5o9QLZZlwn3pKRbWMiCWSSkceEx56fKw=
+
+Name: com/dukascopy/api/drawings/IRayLineChartObject.java
+SHA-256-Digest: ChM9cxAl4KKQK1HgU7bbBCTaqDTONT0mW3hDh/HLNuU=
+
+Name: com/dukascopy/indicators/FractalLinesIndicator.java
+SHA-256-Digest: 3Xi0Vae1wT4QkdYX953JPnNCkW8kp9almce1oX4BSVw=
+
+Name: com/dukascopy/indicators/ADRIndicator.java
+SHA-256-Digest: s2qeU6hFdkdZ/jiRgq3e/nJ5mDXCKyUj9JmAsfWFpgE=
+
+Name: com/dukascopy/api/plugins/Plugin.java
+SHA-256-Digest: BAD0QnBTncHAP6AGyB7s5b8bS1KyddnkKhPmSAKO05Q=
+
+Name: com/dukascopy/api/IStrategyListener.java
+SHA-256-Digest: 1CQw2MlczmLOMjnN98oYME3zZVRwJwDObLPMyattA8c=
+
+Name: com/dukascopy/indicators/RecursiveMovingTrendAverage.java
+SHA-256-Digest: Sj925KGVIREEjqQ14K3gJ5JvVcMslA51Bj8RxmiuZ0A=
+
+Name: com/dukascopy/indicators/TD_IIndicator.java
+SHA-256-Digest: ILBRWXvpXnmuQbpyQk6vrLN4MM1xMHRRIBB//akTKu0=
+
+Name: com/dukascopy/indicators/CurrencySlopeStrength.java
+SHA-256-Digest: S0lCSpbL804IiNicgCaATpmoBZDajgMFnxmxM512cqw=
+
+Name: com/dukascopy/api/system/tester/ITesterExecution.java
+SHA-256-Digest: EH+g8zPFYvPybMPUivb8fZ15zHnKpcbU8tr04HockW0=
+
+Name: com/dukascopy/api/drawings/IStopLossChartObject.java
+SHA-256-Digest: XJxnBJS2ZKLF3rYpfpPh8CTia0Id1OmQnS5n9r2cKco=
+
+Name: META-INF/maven/com.dukascopy.api/JForex-API/pom.properties
+SHA-256-Digest: tJdsXUAhIRODiciMWEmfkL0bkUB0wAVji5YffmUzOOU=
+
+Name: com/dukascopy/api/ISignal.java
+SHA-256-Digest: FR8zh60kq+y+ZG+ZMl8DnOq8HyfdwXpmzRs+75Kwx4k=
+
+Name: com/dukascopy/api/drawings/IFiboCirclesChartObject.java
+SHA-256-Digest: c5YslpnctjNo8XnbctHiogQ2u0xpbR23X1kW2f/LlcE=
+
+Name: com/dukascopy/api/drawings/ISignalDownChartObject.java
+SHA-256-Digest: Ono3ARA7O3bkrRBfRBhVFufp736JORALbdb9aSerwB4=
+
+Name: com/dukascopy/api/feed/util/PointAndFigureFeedInfo.java
+SHA-256-Digest: rR/mEv64iX7CyroGUeFfCPHVi6h249nPvvuriiZmsc0=
+
+Name: com/dukascopy/api/chart/mouse/ChartPanelMouseAdapter.java
+SHA-256-Digest: Nfi4M3N0iUfjlTbNb9wTl7oC6dFefgC3mA2M8T5Odtc=
+
+Name: com/dukascopy/indicators/WoodiePivotIndicator.java
+SHA-256-Digest: UxU3bkt+hu3I534lpXfNzwB71b4y5e27gJ1I2XKgLso=
+
+Name: com/dukascopy/api/OfferSide.java
+SHA-256-Digest: oguAfIfGdfTPIjNtFIasX3EWCA6ex3ENPiEm4uIEs/4=
+
+Name: com/dukascopy/api/IContext.java
+SHA-256-Digest: FsnAKpLkuplkBeQd4W3vba59I20zyJlRIYfo3C460lc=
+
+Name: com/dukascopy/api/plugins/ui/JFOrderTimeLimitationPanel.java
+SHA-256-Digest: 8itDXPzkeaRejvN3wG8usTaPG/hFduGa8bQjJaWvsLE=
+
+Name: com/dukascopy/api/drawings/IChartObjectFactory.java
+SHA-256-Digest: zwHyg0ph6AXrq5co23M/ZyCXJtlz2A3+7K9kbKL2aHM=
+
+Name: com/dukascopy/api/feed/ITailoredFeedDescriptor.java
+SHA-256-Digest: Hn6mYF1LMcJWDTDVqY0dpcaxmtZ0Pf+bcMORfGhMvBI=
+
+Name: com/dukascopy/indicators/HeikinAshiLinesIndicator.java
+SHA-256-Digest: v+7uvoSy0U6PiWjWsd/JBaITRF6o0vcVB0EVpAZwqtw=
+
+Name: com/dukascopy/api/indicators/IIndicatorDrawingSupport.java
+SHA-256-Digest: /9/yNT1lBNIDZAvLEk8JZw8hCZAHJkCnOiF0qyZ+22M=
+
+Name: com/dukascopy/api/plugins/ui/JFTable.java
+SHA-256-Digest: WhuzgzyDMCxXXJPDwGIoa23O8aVxkRSwMkjdPzwlqiE=
+
+Name: com/dukascopy/indicators/FibonacciPivotIndicator.java
+SHA-256-Digest: 2S/k/FVetbj2zJ0Edx8p0oxhael0CwmmMHlAN2vqb9c=
+
+Name: com/dukascopy/indicators/NarrowRangeIndicator.java
+SHA-256-Digest: xj6NMUCdRGx9WSDlyakTrhUUJ9cGgyJnBOPlTb4WNq4=
+
+Name: com/dukascopy/indicators/HeikinAshiSingle.java
+SHA-256-Digest: b1bK8Os4weqr9J/xndGsMiLBRQcOiuD+rE9Y2Puxpog=
+
+Name: com/dukascopy/indicators/pattern/TrianglePatternIndicator.java
+SHA-256-Digest: X5c7PeNkfFp2yXbKW8Pcmp6d0XKh18FuGARmMI359Wo=
+
+Name: com/dukascopy/api/LineBreakLookback.java
+SHA-256-Digest: b3ry1pwOG4syfKILmSpFPnrx0yWcouFTKW+EaPUqlv8=
+
+Name: com/dukascopy/indicators/TicksVWAP.java
+SHA-256-Digest: uHnwp5+KpWrHy/qYhrt/wOw82Kzgt5aBhzeAay4ihcU=
+
+Name: com/dukascopy/api/drawings/ITriangleChartObject.java
+SHA-256-Digest: SK1j4/InNzNiR2UUdiTZDQxU5hLd9E0E1fcvET0TFl8=
+
+Name: com/dukascopy/indicators/OsMAIndicator.java
+SHA-256-Digest: Ivg+q4vvoOchpxxywhU9oQqm2CP2U7c0nn0HZBPSlCA=
+
+Name: com/dukascopy/indicators/PearsonCorrelationCoefficient.java
+SHA-256-Digest: tdpqzqAR3UHd0qAJUigVG3bh+cqvxU8smr9E5JeyT7o=
+
+Name: com/dukascopy/indicators/pattern/PennantPatternIndicator.java
+SHA-256-Digest: L2e5JlBB7o/uP9FQe6PwnCet+sO8/J61uNJI8T96bSs=
+
+Name: com/dukascopy/indicators/SuperTrendIndicator.java
+SHA-256-Digest: vIXH7J4LJFXhDRB4EdcmV6wIkW3B6r69b53ydaUpx+8=
+
+Name: com/dukascopy/api/LoadingProgressListener.java
+SHA-256-Digest: nTE9s1Ou27+3Gu9bJU1URvu6QNlWFir8/4bEvGNQvpw=
+
+Name: com/dukascopy/indicators/ChandeQStickIndicator.java
+SHA-256-Digest: F+aUsUnRcSuHh4AIWeNT2xKlPJNDyFdEf3v529POgM0=
+
+Name: com/dukascopy/indicators/DrakeDelayStochasticIndicator.java
+SHA-256-Digest: QFvFi0NiEWWaNqkjzSW66TDUoM2gVBp2K3Ky7dQkcEY=
+
+Name: com/dukascopy/indicators/SentimentIndexBarIndicator.java
+SHA-256-Digest: guzbHddx7wz2r/Hg3k5jodjUsI7cH+25PTPLoyL23Uc=
+
+Name: com/dukascopy/api/plugins/menu/IPluginMenu.java
+SHA-256-Digest: iztxjboQ+2L/aWeZlqDMHUJOnZ96/BXJLYL5UFVO6vM=
+
+Name: com/dukascopy/indicators/ForceIndicator.java
+SHA-256-Digest: d2oLdsDWAzQF1qprkz29q1XysoXnhsfGGmGCN5WKjcs=
+
+Name: com/dukascopy/api/indicators/StringOptInputDescription.java
+SHA-256-Digest: AG5KzD/PybWORRF+3pxQvWp8DVT6uPI+LNOWYzTjs9U=
+
+Name: com/dukascopy/api/drawings/ICustomWidgetChartObject.java
+SHA-256-Digest: Jx07Z/iysVA8lQUYGVqxD7QyIn9PsXvaXFxP8hcdnRA=
+
+Name: com/dukascopy/indicators/pattern/InverseHeadAndShouldersPatternI
+ ndicator.java
+SHA-256-Digest: AzSb/j4DVG1j3lL2H7LWQTr1nbOKu5wIlD1yW2N2poY=
+
+Name: com/dukascopy/api/drawings/IFiboArcChartObject.java
+SHA-256-Digest: okubIMZNZ86UcmRaFko+BymdfAhX0Tav+HR88ofP3dM=
+
+Name: com/dukascopy/indicators/VolumeIndicator.java
+SHA-256-Digest: MiyEQPv4MjgAqMBmdQt5kHZ2JnXAK5Inn/H7S+oC4uQ=
+

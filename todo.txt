@@ -1,0 +1,1 @@
+implement output of events for USDCAD that takes place at the same time (output several evemts in a single row) 
