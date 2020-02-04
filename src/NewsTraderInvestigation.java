@@ -58,6 +58,7 @@ import com.dukascopy.api.drawings.IVerticalLineChartObject;
 
 public class NewsTraderInvestigation implements IStrategy {
 
+    public static final double MEANINGFUL = 30;
     private CopyOnWriteArrayList<TradeEventAction> tradeEventActions = new CopyOnWriteArrayList<>();
     private static final String DATE_FORMAT_NOW = "yyyyMMdd_HHmmss";
     private IEngine engine;
@@ -232,7 +233,7 @@ public class NewsTraderInvestigation implements IStrategy {
                 } else if (order.getState().equals(IOrder.State.FILLED)) {
                     listActive.add(order);
                 }
-                
+
             }
 
             PendingPositions = listPending;
@@ -245,7 +246,7 @@ public class NewsTraderInvestigation implements IStrategy {
 
     public void closeOppositePendingOrders(IMessage message, IOrder order) throws JFException {
         if (message.getType() == IMessage.Type.ORDER_FILL_OK) {
-            
+
             boolean closeLong = !order.isLong();
 
             for (IOrder pendingOrder : PendingPositions) {
@@ -301,9 +302,10 @@ public class NewsTraderInvestigation implements IStrategy {
             updateVariables(message.getOrder().getInstrument());
 
             IOrder order = message.getOrder();
-            //if(debug)
-            //    console.getOut().println("onMessage messageType=" + message.getType() );
-            
+            // if(debug)
+            // console.getOut().println("onMessage messageType=" +
+            // message.getType() );
+
             if (message.getType() == IMessage.Type.ORDER_FILL_OK) {
                 // if tp, ls for opened order is zero
                 setOpenedOrderTP_SL(order);
@@ -343,11 +345,11 @@ public class NewsTraderInvestigation implements IStrategy {
         if (order.getTakeProfitPrice() == 0) {
 
             if (order.isLong()) {
-                sl = round(order.getOpenPrice() - order.getInstrument().getPipValue() * SL/10, order.getInstrument());
-                tp = round(order.getOpenPrice() + order.getInstrument().getPipValue() * TP/10, order.getInstrument());
+                sl = round(order.getOpenPrice() - order.getInstrument().getPipValue() * SL / 10, order.getInstrument());
+                tp = round(order.getOpenPrice() + order.getInstrument().getPipValue() * TP / 10, order.getInstrument());
             } else {
-                sl = round(order.getOpenPrice() + order.getInstrument().getPipValue() * SL/10, order.getInstrument());
-                tp = round(order.getOpenPrice() - order.getInstrument().getPipValue() * TP/10, order.getInstrument());
+                sl = round(order.getOpenPrice() + order.getInstrument().getPipValue() * SL / 10, order.getInstrument());
+                tp = round(order.getOpenPrice() - order.getInstrument().getPipValue() * TP / 10, order.getInstrument());
             }
 
             order.setTakeProfitPrice(tp);
@@ -358,9 +360,9 @@ public class NewsTraderInvestigation implements IStrategy {
 
         if (order.getStopLossPrice() == 0) {
             if (order.isLong()) {
-                sl = round(order.getOpenPrice() - order.getInstrument().getPipValue() * SL/10, order.getInstrument());
+                sl = round(order.getOpenPrice() - order.getInstrument().getPipValue() * SL / 10, order.getInstrument());
             } else {
-                sl = round(order.getOpenPrice() + order.getInstrument().getPipValue() * SL/10, order.getInstrument());
+                sl = round(order.getOpenPrice() + order.getInstrument().getPipValue() * SL / 10, order.getInstrument());
             }
 
             order.setStopLossPrice(sl);// order.setStopLossPrice(price, side,
@@ -384,7 +386,7 @@ public class NewsTraderInvestigation implements IStrategy {
         // here it is - On Tick start point
         if (!TradeOrInvestigate) {
             main.investigate();
-            
+
         } else {
             main.trading();
             main.breakEven();
@@ -414,10 +416,10 @@ public class NewsTraderInvestigation implements IStrategy {
 
         if (marketOrders)
             checkAndLockProfit(askBar, bidBar);
-            
+
         if (!TradeOrInvestigate && !investigation) {
-                main.investigateNewApproach();
-                investigation = true;
+            main.investigateNewApproach();
+            investigation = true;
         }
     }
 
@@ -472,8 +474,70 @@ public class NewsTraderInvestigation implements IStrategy {
         return null;
     }
 
-    public IOrder OpenOrder(IEngine.OrderCommand command, Instrument instrument, double lot, double dPrice,
-            double dStopLoss, double dTakeProfit, long goodTillTime, String comment) {
+    public static boolean isMeaningful(List<NewsEvent> events) {
+        boolean result = false;
+
+        for (NewsEvent event : events) {
+            if (isMeaningful(event)) {
+                for (NewsEvent e : events) {
+                    if (event != e && e.getChangePips() == null && event.getPair().contentEquals(e.getPair())) {
+                        e.setPreviousCandleChangePips(event.getPreviousCandleChangePips());
+                        e.setChangePips(event.getChangePips());
+                    }
+                }
+                result = true;
+                break;
+            }
+        }
+
+        return result;
+    }
+
+    public static boolean isMeaningful(NewsEvent event) {
+        return event.getChangePips() != null && (event.getChangePips() >= MEANINGFUL || event.getChangePips() <= -1 * MEANINGFUL);
+    }
+
+    public static String toString(NewsEvent mainEvent, List<NewsEvent> list) {
+        // TODO replace all commas to be a dot: 1,12345 -> 1.12345
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        java.text.DecimalFormat df = new java.text.DecimalFormat("#0.#");
+
+        java.text.DecimalFormatSymbols dfs = df.getDecimalFormatSymbols();
+        dfs.setDecimalSeparator('.');
+        df.setDecimalFormatSymbols(dfs);
+        java.text.DecimalFormat pf = new java.text.DecimalFormat("#0.0");
+        pf.setDecimalFormatSymbols(dfs);
+
+        String sr = ", ";
+        String line = sdf.format(mainEvent.dateTime) + sr;
+        line += mainEvent.currency + sr;
+        line += mainEvent.importance.substring(0, 1) + sr;
+
+        line = eventLine(df, line, mainEvent);
+
+        for (NewsEvent event : list) {
+            if (event != mainEvent) {
+                line = eventLine(df, line, event);
+            }
+        }
+
+        line += sr;
+        line += mainEvent.pair + sr;
+        line += (mainEvent.changePercentage != null ? df.format(mainEvent.changePercentage) + "%" : "-") + sr;
+        line += (mainEvent.previousCandleChangePips != null ? df.format(mainEvent.previousCandleChangePips) : "-") + sr;
+        line += (mainEvent.changePips != null ? df.format(mainEvent.changePips) : "-") + sr;
+
+        return line;
+    }
+
+    private static String eventLine(java.text.DecimalFormat df, String line, NewsEvent event) {
+        line += "(" + event.getCurrency() + " " + event.title + " "
+                + (event.changePercentage != null ? df.format(event.changePercentage) + "%" : "-") + ")";
+        return line;
+    }
+
+    public IOrder OpenOrder(IEngine.OrderCommand command, Instrument instrument, double lot, double dPrice, double dStopLoss,
+            double dTakeProfit, long goodTillTime, String comment) {
         // ITick tick = getLastTick(instrument);
 
         double stopLoss = round(dStopLoss, instrument);
@@ -484,22 +548,24 @@ public class NewsTraderInvestigation implements IStrategy {
         IOrder order = null;
 
         try {
-            //console.getOut().println("Trying to open order...");
-            order = context.getEngine().submitOrder(label, instrument, command, lot, price, defaultSlippage, stopLoss,
-                    takeProfit, goodTillTime, comment);
+            // console.getOut().println("Trying to open order...");
+            order = context.getEngine().submitOrder(label, instrument, command, lot, price, defaultSlippage, stopLoss, takeProfit,
+                    goodTillTime, comment);
             // wait max 100 milliseconds for OPENED
             IMessage message = order.waitForUpdate(200, TimeUnit.MILLISECONDS);
-            //console.getOut().println("message.getType=" + message.getType());
+            // console.getOut().println("message.getType=" + message.getType());
 
             // resubmit order on rejection
             while (message.getType() == IMessage.Type.ORDER_SUBMIT_REJECTED && retries < RETRIES) {
                 retries++;
-                //console.getOut().println("Trying to open order... retry " + retries);
-                order = context.getEngine().submitOrder(label, instrument, command, lot, price, defaultSlippage,
-                        stopLoss, takeProfit, goodTillTime, comment);
+                // console.getOut().println("Trying to open order... retry " +
+                // retries);
+                order = context.getEngine().submitOrder(label, instrument, command, lot, price, defaultSlippage, stopLoss, takeProfit,
+                        goodTillTime, comment);
                 // wait max 100 milliseconds for OPENED
                 message = order.waitForUpdate(200, TimeUnit.MILLISECONDS);
-                //console.getOut().println("Submit Order message.getType()=" + message.getType());
+                // console.getOut().println("Submit Order message.getType()=" +
+                // message.getType());
             }
 
             if (debug) {
@@ -687,7 +753,6 @@ public class NewsTraderInvestigation implements IStrategy {
     }
 
     class AllInOne {
-
         private String[] symbols = { "USD", "EUR", "GBP", "CAD", "CHF", "NZD", "JPY", "AUD" };
         private String[] pairs = { "USD/CAD", "EUR/USD", "GBP/USD", "USD/CAD", "USD/CHF", "NZD/USD", "USD/JPY", "AUD/USD" };
         private HashMap<String, String> pairsMap = new HashMap<>();
@@ -695,6 +760,7 @@ public class NewsTraderInvestigation implements IStrategy {
         private List<NewsEvent> newsEvents;
         private Map<String, List<NewsEvent>> byTitleMap = new LinkedHashMap<>();
         private Map<String, List<NewsEvent>> byPairMap = new LinkedHashMap<>();
+        private Map<Long, List<NewsEvent>> byTimeMap = new LinkedHashMap<>();
 
         private List<NewsEvent> newsSortedByTime = null;
         private final long ONE_MINUTE_IN_MILLIS = 60000;
@@ -735,7 +801,6 @@ public class NewsTraderInvestigation implements IStrategy {
             return isSummer;
         }
 
-
         private void correctDaylightSaving(NewsEvent event) {
 
             long newsTime = event.getDateTime().getTime();
@@ -767,9 +832,10 @@ public class NewsTraderInvestigation implements IStrategy {
             for (NewsEvent event : list) {
 
                 String pair = pairsMap.get(event.getCurrency());
-                
-                if(pair==null) continue;// it might be more currencies than expected
-                
+
+                if (pair == null)
+                    continue;// it might be more currencies than expected
+
                 event.setPair(pair);
                 // use only news for the pair from strategy instruments
                 // Filtering by instrument
@@ -777,8 +843,9 @@ public class NewsTraderInvestigation implements IStrategy {
                 for (String sInstrument : instruments) {
 
                     if (pair.equals(sInstrument)) {
-                        //if (debug)
-                        //    console.getOut().println("Event added for " + pair + " Event:" + event.toString());
+                        // if (debug)
+                        // console.getOut().println("Event added for " + pair +
+                        // " Event:" + event.toString());
 
                         shouldAdd = true;
                         break;
@@ -791,7 +858,7 @@ public class NewsTraderInvestigation implements IStrategy {
                 // filtering by time - avoid old news
                 correctDaylightSaving(event);
 
-                if(TradeOrInvestigate){//while trading avoid old news
+                if (TradeOrInvestigate) {// while trading avoid old news
                     if (!(LastTick.getTime() < event.getDateTime().getTime()))
                         continue;
                 }
@@ -805,6 +872,15 @@ public class NewsTraderInvestigation implements IStrategy {
 
                 byTitleList.add(event);
                 byTitleMap.put(key, byTitleList);
+
+                long timeKey = event.getDateTime().getTime();
+
+                List<NewsEvent> byTimeList = byTimeMap.get(timeKey);
+                if (byTimeList == null) {
+                    byTimeList = new ArrayList<>();
+                }
+                byTimeList.add(event);
+                byTimeMap.put(timeKey, byTimeList);
 
                 List<NewsEvent> byPairList = byPairMap.get(pair);
                 if (byPairList == null) {
@@ -821,8 +897,7 @@ public class NewsTraderInvestigation implements IStrategy {
                     if (chart != null) {
                         Date dateTime = event.getDateTime();
                         IChartObjectFactory factory = chart.getChartObjectFactory();
-                        IVerticalLineChartObject newsLine = factory.createVerticalLine(event.toString(),
-                                dateTime.getTime());
+                        IVerticalLineChartObject newsLine = factory.createVerticalLine(event.toString(), dateTime.getTime());
                         newsLine.setColor(java.awt.Color.RED);
                         newsLine.setMenuEnabled(false);
                         newsLine.setShowLabel(true);
@@ -831,9 +906,10 @@ public class NewsTraderInvestigation implements IStrategy {
                     }
                 }
             }
-            
-            if(!TradeOrInvestigate)
-                console.getOut().println("News events was successfully processed and separated by currency+title for investigations: " + list.size());
+
+            if (!TradeOrInvestigate)
+                console.getOut().println(
+                        "News events was successfully processed and separated by currency+title for investigations: " + list.size());
 
             String instrumentsNamesStr = "";
             for (String instrumentName : instruments) {
@@ -852,8 +928,8 @@ public class NewsTraderInvestigation implements IStrategy {
                 newsSortedByTime = new LinkedList<>();
                 newsSortedByTime.addAll(newsEvents);
                 Collections.sort(newsSortedByTime);
-                if(debug)
-                console.getOut().println("sortNewsByTime() - OK ");
+                if (debug)
+                    console.getOut().println("sortNewsByTime() - OK ");
             }
         }
 
@@ -925,8 +1001,7 @@ public class NewsTraderInvestigation implements IStrategy {
                     console.getOut().println("Working events found: " + workingEvents.size() + "  - news release time: "
                             + workingEvents.get(0).getDateTime());
 
-                for (Iterator<Map.Entry<String, List<NewsEvent>>> it = workingNewsMap.entrySet().iterator(); it
-                        .hasNext();) {
+                for (Iterator<Map.Entry<String, List<NewsEvent>>> it = workingNewsMap.entrySet().iterator(); it.hasNext();) {
                     Map.Entry<String, List<NewsEvent>> entry = it.next();
                     String pair = entry.getKey();
                     Tick lastTick = LastTickMap.get(pair);
@@ -974,9 +1049,9 @@ public class NewsTraderInvestigation implements IStrategy {
                         if (lastTick.getTime() < cancelBleakoutWaitingTime) {
 
                             // open market orders on break-out
-                            if(isSpreadOK(instrument, lastTick)){
+                            if (isSpreadOK(instrument, lastTick)) {
                                 boolean breakoutHappened = checkBreakoutAndOpenOrders(instrument, priceMin, priceMax);
-    
+
                                 if (breakoutHappened) {
                                     newsSortedByTime.removeAll(events);
                                     workingEvents.removeAll(events);
@@ -1007,14 +1082,14 @@ public class NewsTraderInvestigation implements IStrategy {
                 }
             }
         }
-        
-        public boolean isSpreadOK(Instrument instrument, Tick lastTick){
-            double spreadPip = (lastTick.getAsk() - lastTick.getBid())/instrument.getPipValue();
-            boolean result  = spreadPip <= SPREAD;
-            
-            if(!result && debug)
+
+        public boolean isSpreadOK(Instrument instrument, Tick lastTick) {
+            double spreadPip = (lastTick.getAsk() - lastTick.getBid()) / instrument.getPipValue();
+            boolean result = spreadPip <= SPREAD;
+
+            if (!result && debug)
                 console.getOut().println("Spread is too high");
-                
+
             return result;
         }
 
@@ -1024,7 +1099,7 @@ public class NewsTraderInvestigation implements IStrategy {
 
                     for (IOrder order : ActiveOrders) {
                         double lockLevelPips = lockLevel / 10;
-                        
+
                         if (order.getProfitLossInPips() >= lockLevelPips) {
 
                             double open = order.getOpenPrice();
@@ -1054,8 +1129,8 @@ public class NewsTraderInvestigation implements IStrategy {
             double initialPriceLevelForBuy = priceMax + gapInPrice;
 
             if (debug)
-                console.getOut().println("priceMin=" + priceMin + " priceMax=" + priceMax + " initialPriceSell="
-                        + initialPriceLevelForSell + " initialPriceBuy=" + initialPriceLevelForBuy);
+                console.getOut().println("priceMin=" + priceMin + " priceMax=" + priceMax + " initialPriceSell=" + initialPriceLevelForSell
+                        + " initialPriceBuy=" + initialPriceLevelForBuy);
 
             double lot, stopLossPrice, takeProfitPrice;
 
@@ -1089,8 +1164,7 @@ public class NewsTraderInvestigation implements IStrategy {
 
         }
 
-        public boolean checkBreakoutAndOpenOrders(Instrument instrument, double priceMin, double priceMax)
-                throws JFException {        
+        public boolean checkBreakoutAndOpenOrders(Instrument instrument, double priceMin, double priceMax) throws JFException {
             // open Sell/Buy STOP orders
             Tick lastTick = LastTickMap.get(instrument.getName());
 
@@ -1114,8 +1188,7 @@ public class NewsTraderInvestigation implements IStrategy {
                 lot = getPositionSize(instrument, lastTick.getAsk(), stopLossPrice, command);
 
                 // if(debug)
-                console.getOut().println(instrument.getName() + " Up breakout - open Buy lot=" + lot + " open price="
-                        + lastTick.getAsk());
+                console.getOut().println(instrument.getName() + " Up breakout - open Buy lot=" + lot + " open price=" + lastTick.getAsk());
 
                 OpenOrder(command, instrument, lot, lastTick.getAsk(), 0, 0, 0, "UpBreakoutBUY");
 
@@ -1127,8 +1200,8 @@ public class NewsTraderInvestigation implements IStrategy {
                 lot = getPositionSize(instrument, lastTick.getBid(), stopLossPrice, command);
 
                 // if(debug)
-                console.getOut().println(instrument.getName() + " Down breakout - open Sell lot=" + lot + " open price="
-                        + lastTick.getBid());
+                console.getOut()
+                        .println(instrument.getName() + " Down breakout - open Sell lot=" + lot + " open price=" + lastTick.getBid());
 
                 OpenOrder(command, instrument, lot, lastTick.getBid(), 0, 0, 0, "DownBreakoutSell");
             }
@@ -1153,7 +1226,7 @@ public class NewsTraderInvestigation implements IStrategy {
 
             // open buy stop orders
             command = IEngine.OrderCommand.BUYSTOP;
-                
+
             for (int i = 0; i < numberOfOrders; i++) {
                 double priceBuy = initialPriceLevelForBuy + (i * stepInPrice);
                 stopLossPrice = priceBuy - (SL / 10 * lastTick.getInstrument().getPipValue());
@@ -1164,7 +1237,8 @@ public class NewsTraderInvestigation implements IStrategy {
                 if (debug)
                     console.getOut().println("Buy lot=" + lot + " priceBuy=" + priceBuy);
 
-                OpenOrder(command, instrument, lot, priceBuy, stopLossPrice, takeProfitPrice, cancelTime,"BUYSTOP_" + (i + 1) + " requested price:" + priceBuy);
+                OpenOrder(command, instrument, lot, priceBuy, stopLossPrice, takeProfitPrice, cancelTime,
+                        "BUYSTOP_" + (i + 1) + " requested price:" + priceBuy);
             }
 
             // open sell stop orders
@@ -1180,9 +1254,10 @@ public class NewsTraderInvestigation implements IStrategy {
                 if (debug)
                     console.getOut().println("Sell lot=" + lot + " priceSell=" + priceSell);
 
-                OpenOrder(command, instrument, lot, priceSell, stopLossPrice, takeProfitPrice, cancelTime,"SELLSTOP_" + (i + 1) + " requested price:"+ priceSell);
+                OpenOrder(command, instrument, lot, priceSell, stopLossPrice, takeProfitPrice, cancelTime,
+                        "SELLSTOP_" + (i + 1) + " requested price:" + priceSell);
             }
-                 
+
         }
 
         private boolean isLongOrder(IEngine.OrderCommand orderCommand) {
@@ -1191,8 +1266,8 @@ public class NewsTraderInvestigation implements IStrategy {
                     || orderCommand == IEngine.OrderCommand.BUY || orderCommand == IEngine.OrderCommand.PLACE_BID;
         }
 
-        private double getPositionSize(Instrument instrument, double entryPrice, double stopLossPrice,
-                IEngine.OrderCommand orderCmd) throws JFException {
+        private double getPositionSize(Instrument instrument, double entryPrice, double stopLossPrice, IEngine.OrderCommand orderCmd)
+                throws JFException {
 
             String accountCurrency = context.getAccount().getCurrency().getCurrencyCode();
             String primaryCurrency = instrument.getPrimaryCurrency().getCurrencyCode();
@@ -1280,87 +1355,71 @@ public class NewsTraderInvestigation implements IStrategy {
             // file
 
             sortNewsByTime();
-            
-            //old approach
-/*
-            if (workingEvents.size() == 0) {
-                // looking for working news events ( or several events on the
-                // same time)
-                for (NewsEvent event : newsSortedByTime) {
-                    Tick lastTick = LastTickMap.get(event.getPair());
 
-                    // 5 second tolerance
-                    long tolerance = 5000;
-                    long minutesAfterNewsRelease = 5;
-                    long prevBarTime = history.getPreviousBarStart(Period.ONE_MIN, lastTick.getTime());
-                    // collecting working news events minutesAfterNewsRelease
-                    if (prevBarTime > event.getDateTime().getTime()
-                            && (prevBarTime - event.getDateTime().getTime()) <= (minutesAfterNewsRelease * ONE_MINUTE_IN_MILLIS)
-                            && (prevBarTime - event.getDateTime().getTime()) >= (minutesAfterNewsRelease * ONE_MINUTE_IN_MILLIS)
-                                            - tolerance) {
-                        workingEvents.add(event);
-                    } else if (event.getDateTime().getTime() > lastTick.getTime()) {
-                        // stop iterating when next news event more that 1 min
-                        // ahead
-                        // to speed up processing
-                        break;
-                    }
-                }
-            }
-
-            if (workingEvents.size() > 0) {
-                if (debug)
-                console.getOut().println("Working events found: " + workingEvents.size() + "  - news release time: "
-                        + workingEvents.get(0).getDateTime());
-                
-                for (NewsEvent event : workingEvents) {
-                    if (event.actual != null && event.previous != null) {
-                        double change = (event.actual - event.previous) / event.previous
-                                * ((event.previous < 0) ? -1 : 1);
-                        event.setChange(change);
-                        // calculating change in %
-                        event.setChangePercentage(change * 100);
-                    }
-
-                    Tick lastTick = LastTickMap.get(event.getPair());
-
-                    long prevBarTime = history.getPreviousBarStart(Period.ONE_MIN, lastTick.getTime());
-
-                    Instrument instrument = Instrument.fromString(event.getPair());
-                    int INVESTIGATE_BARS = 2; // getting 2 ONE_MIN bars from  history
-                    List<IBar> bars = history.getBars(instrument, Period.ONE_MIN, OfferSide.BID,
-                            history.getTimeForNBarsBack(Period.ONE_MIN, prevBarTime, INVESTIGATE_BARS), prevBarTime);
-
-                    double priceMin = Double.MAX_VALUE, priceMax = Double.MIN_VALUE;
-                    double previousCandleChangePips = 0;
-                    if (bars.size() > 0) {
-                        // looking start price and price change 1 min after news Pips
-                        // release time closed bar
-                        event.setStartPrice(bars.get(0).getClose());
-                        previousCandleChangePips = (bars.get(0).getClose() - bars.get(0).getOpen()) * Math.pow(10, instrument.getPipScale());
-                        bars.remove(0);
-                        double changePips = 0;
-
-                        for (IBar bar : bars) {
-                            if (bar.getLow() < priceMin)
-                                priceMin = bar.getLow();
-                            if (bar.getHigh() > priceMax)
-                                priceMax = bar.getHigh();
-                            changePips = (bar.getClose() - event.getStartPrice()) * Math.pow(10, instrument.getPipScale());
-                        }
-                        event.setChangePips(changePips);
-                        event.setPreviousCandleChangePips(previousCandleChangePips);
-                    }
-
-                    if (debug)
-                        console.getOut().println("Working news event found: " + event);
-                }
-                // removing processed news events from workingEvents list &
-                // newsSortedByTime to speed up processing
-                newsSortedByTime.removeAll(workingEvents);
-                workingEvents.clear();
-            }
-            */
+            // old approach
+            /*
+             * if (workingEvents.size() == 0) { // looking for working news
+             * events ( or several events on the // same time) for (NewsEvent
+             * event : newsSortedByTime) { Tick lastTick =
+             * LastTickMap.get(event.getPair());
+             * 
+             * // 5 second tolerance long tolerance = 5000; long
+             * minutesAfterNewsRelease = 5; long prevBarTime =
+             * history.getPreviousBarStart(Period.ONE_MIN, lastTick.getTime());
+             * // collecting working news events minutesAfterNewsRelease if
+             * (prevBarTime > event.getDateTime().getTime() && (prevBarTime -
+             * event.getDateTime().getTime()) <= (minutesAfterNewsRelease *
+             * ONE_MINUTE_IN_MILLIS) && (prevBarTime -
+             * event.getDateTime().getTime()) >= (minutesAfterNewsRelease *
+             * ONE_MINUTE_IN_MILLIS) - tolerance) { workingEvents.add(event); }
+             * else if (event.getDateTime().getTime() > lastTick.getTime()) { //
+             * stop iterating when next news event more that 1 min // ahead //
+             * to speed up processing break; } } }
+             * 
+             * if (workingEvents.size() > 0) { if (debug)
+             * console.getOut().println("Working events found: " +
+             * workingEvents.size() + "  - news release time: " +
+             * workingEvents.get(0).getDateTime());
+             * 
+             * for (NewsEvent event : workingEvents) { if (event.actual != null
+             * && event.previous != null) { double change = (event.actual -
+             * event.previous) / event.previous ((event.previous < 0) ? -1 : 1);
+             * event.setChange(change); // calculating change in %
+             * event.setChangePercentage(change * 100); }
+             * 
+             * Tick lastTick = LastTickMap.get(event.getPair());
+             * 
+             * long prevBarTime = history.getPreviousBarStart(Period.ONE_MIN,
+             * lastTick.getTime());
+             * 
+             * Instrument instrument = Instrument.fromString(event.getPair());
+             * int INVESTIGATE_BARS = 2; // getting 2 ONE_MIN bars from history
+             * List<IBar> bars = history.getBars(instrument, Period.ONE_MIN,
+             * OfferSide.BID, history.getTimeForNBarsBack(Period.ONE_MIN,
+             * prevBarTime, INVESTIGATE_BARS), prevBarTime);
+             * 
+             * double priceMin = Double.MAX_VALUE, priceMax = Double.MIN_VALUE;
+             * double previousCandleChangePips = 0; if (bars.size() > 0) { //
+             * looking start price and price change 1 min after news Pips //
+             * release time closed bar
+             * event.setStartPrice(bars.get(0).getClose());
+             * previousCandleChangePips = (bars.get(0).getClose() -
+             * bars.get(0).getOpen()) * Math.pow(10, instrument.getPipScale());
+             * bars.remove(0); double changePips = 0;
+             * 
+             * for (IBar bar : bars) { if (bar.getLow() < priceMin) priceMin =
+             * bar.getLow(); if (bar.getHigh() > priceMax) priceMax =
+             * bar.getHigh(); changePips = (bar.getClose() -
+             * event.getStartPrice()) * Math.pow(10, instrument.getPipScale());
+             * } event.setChangePips(changePips);
+             * event.setPreviousCandleChangePips(previousCandleChangePips); }
+             * 
+             * if (debug) console.getOut().println("Working news event found: "
+             * + event); } // removing processed news events from workingEvents
+             * list & // newsSortedByTime to speed up processing
+             * newsSortedByTime.removeAll(workingEvents); workingEvents.clear();
+             * }
+             */
 
         }
 
@@ -1371,12 +1430,11 @@ public class NewsTraderInvestigation implements IStrategy {
             Date startDate;
             try {
                 // start date for instruments could be from 01/01/2005
-                startDate = sdf.parse("01/01/2005 00:00:00");
+                startDate = sdf.parse("01/01/2004 00:00:00");
             } catch (ParseException e) {
                 throw new JFException(e);
             }
 
-            
             for (NewsEvent event : newsSortedByTime) {
                 // avoid very old news
                 if (event.getDateTime().getTime() < startDate.getTime())
@@ -1392,26 +1450,37 @@ public class NewsTraderInvestigation implements IStrategy {
                     event.setChangePercentage(change * 100);
 
                     // bar on news time
-                    int minutesAfterEvent = 5;
-                    long endBarTime = history.getPreviousBarStart(Period.ONE_MIN, event.getDateTime().getTime() + minutesAfterEvent * this.ONE_MINUTE_IN_MILLIS);
+                    int minutesAfterEvent = 2;
+                    long endBarTime = history.getPreviousBarStart(Period.ONE_MIN,
+                            event.getDateTime().getTime() + minutesAfterEvent * this.ONE_MINUTE_IN_MILLIS);
 
                     Instrument instrument = Instrument.fromString(event.getPair());
-                    int INVESTIGATE_BARS = minutesAfterEvent+1; // +1 bar before news to analyze start price
+                    int INVESTIGATE_BARS = minutesAfterEvent + 1; // +1 bar
+                                                                    // before
+                                                                    // news to
+                                                                    // analyze
+                                                                    // start
+                                                                    // price
 
                     long startBarTime = history.getTimeForNBarsBack(Period.ONE_MIN, endBarTime, INVESTIGATE_BARS);
                     List<IBar> bars = history.getBars(instrument, Period.ONE_MIN, OfferSide.BID, startBarTime, endBarTime);
-                    
-                    //if (debug)
-                    //    console.getOut().println("event time:" + sdf.format(event.getDateTime())+ " start bar time: " + sdf.format(new Date(startBarTime))+" end bar time: "+sdf.format(new Date(endBarTime)));
+
+                    // if (debug)
+                    // console.getOut().println("event time:" +
+                    // sdf.format(event.getDateTime())+ " start bar time: " +
+                    // sdf.format(new Date(startBarTime))+" end bar time:
+                    // "+sdf.format(new Date(endBarTime)));
 
                     double priceMin = Double.MAX_VALUE, priceMax = Double.MIN_VALUE;
                     double previousCandleChangePips = 0;
 
                     if (bars.size() > 0) {
-                        // looking start price and price change minutesAfterEvent min after news, Pips
+                        // looking start price and price change
+                        // minutesAfterEvent min after news, Pips
                         // release time closed bar
                         event.setStartPrice(bars.get(0).getClose());
-                        previousCandleChangePips = (bars.get(0).getClose() - bars.get(0).getOpen()) * Math.pow(10, instrument.getPipScale());
+                        previousCandleChangePips = (bars.get(0).getClose() - bars.get(0).getOpen())
+                                * Math.pow(10, instrument.getPipScale());
                         bars.remove(0);
                         Double changePips = null;
 
@@ -1441,61 +1510,79 @@ public class NewsTraderInvestigation implements IStrategy {
             }
         }
 
-
         @SuppressWarnings("unchecked")
         public void writeInvestigationsToCSV() {
 
+            for (String key : byTitleMap.keySet()) {
 
-                for (String key : byTitleMap.keySet()) {
+                List<NewsEvent> events = byTitleMap.get(key);
+                /// NewsEvent eve = events.get(0);
+                // investigating only USD/CAD for now
+                // if (!eve.getCurrency().equals("USD") &&
+                // !eve.getCurrency().equals("CAD"))
+                // continue;
 
-                    List<NewsEvent> events = byTitleMap.get(key);
-                    NewsEvent eve = events.get(0);
-                    // investigating only USD/CAD for now
-                    if (!eve.getCurrency().equals("USD") && !eve.getCurrency().equals("CAD"))
-                        continue;
-    
-                        // sorting by change in %
+                // sorting by change in %
                 Collections.sort(events, new Comparator<NewsEvent>() {
-                            @Override
+                    @Override
                     public int compare(NewsEvent event1, NewsEvent event2) {
                         if (event1 != null && event2 != null) {
-    
-    
-                                    if (event1.change != null && event2.change != null)
-                                        return event1.change.compareTo(event2.change);
-                                    else
-                                        return 1;
-                                } else
-                                    return 1;
+
+                            if (event1.getChangePips() != null && event2.getChangePips() != null) {
+                                Double eve1Pips = Math.abs(event1.getChangePips());
+                                Double eve2Pips = Math.abs(event2.getChangePips());
+                                return eve2Pips.compareTo(eve1Pips);
                             }
-                        });
+                            else
+                                return 1;
+                        } else
+                            return 1;
+                    }
+                });
 
+                String fullName = destFileName + key + ".csv";
+                Path path = Paths.get(fullName);
 
-                    String fullName = destFileName + key + ".csv";
-                    Path path = Paths.get(fullName);
-    
-                    try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.CREATE)) {
-                        for (NewsEvent event : events) {
-                        if (event.getChangePercentage() != null && event.getChangePercentage() != 0 && event.getChangePips() != null
-                                && event.getChangePips() != 0) {
-                            
+                try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.CREATE)) {
+                    for (NewsEvent event : events) {
+                        List<NewsEvent> sameTimeList = byTimeMap.get(event.getDateTime().getTime());
+
+                        if (sameTimeList.size() == 1) {
+                            if (NewsTraderInvestigation.isMeaningful(event)) {
                                 writer.write(event.toString() + "\n");
                             }
+                        } else {
+                            // several news events at the same time
+                            //if (NewsTraderInvestigation.isMeaningful(sameTimeList)) {
+                            //    writer.write(NewsTraderInvestigation.toString(event, sameTimeList) + "\n");
+                            //}
+                            if (NewsTraderInvestigation.isMeaningful(sameTimeList)) {
+                                // main news event goes first
+                                writer.write(event.toString() + "\n");
+
+                                for (NewsEvent sameTimeEvent : sameTimeList) {
+                                    if (sameTimeEvent == event)
+                                        continue;
+                                    else
+                                        writer.write(sameTimeEvent.toString() + "\n");
+                                }
+                            }
                         }
-                    } catch (IOException ioe) {
-                        ioe.printStackTrace();
                     }
-                    try {
-                        FileChannel file = FileChannel.open(path);
-    
-                        if (file.size() == 0) {
-                            path.toFile().delete();
-                        }
-    
-                    } catch (IOException ioe) {
-                        ioe.printStackTrace();
-                    }
+                } catch (IOException ioe) {
+                    ioe.printStackTrace();
                 }
+                try {
+                    FileChannel file = FileChannel.open(path);
+
+                    if (file.size() == 0) {
+                        path.toFile().delete();
+                    }
+
+                } catch (IOException ioe) {
+                    ioe.printStackTrace();
+                }
+            }
         }
     }
 
@@ -1516,8 +1603,8 @@ public class NewsTraderInvestigation implements IStrategy {
                 int timeZoneOffsetHours = 0;
 
                 if (timeZone != null) {
-                    String sTimeZoneOffsetHours = timeZone.text().replace("GMT", "").replace("(", "").replace(")", "")
-                            .replace(" ", "").replace(":00", "");
+                    String sTimeZoneOffsetHours = timeZone.text().replace("GMT", "").replace("(", "").replace(")", "").replace(" ", "")
+                            .replace(":00", "");
 
                     if (sTimeZoneOffsetHours.length() > 0)
                         timeZoneOffsetHours = Integer.parseInt(sTimeZoneOffsetHours);
@@ -1541,8 +1628,8 @@ public class NewsTraderInvestigation implements IStrategy {
                     String forecast = event.selectFirst("td[id^=eventForecast]").text();
                     String actual = event.selectFirst("td[id^=eventActual]").text();
 
-                    NewsEvent newsEvent = new NewsEvent(title, timeZoneOffsetHours, date + Constants.SPACE + time,
-                            currency, importance, previous, forecast, actual);
+                    NewsEvent newsEvent = new NewsEvent(title, timeZoneOffsetHours, date + Constants.SPACE + time, currency, importance,
+                            previous, forecast, actual);
 
                     // if (debug)
                     // console.getOut().println("newsEvent: " + newsEvent);
@@ -1561,8 +1648,7 @@ public class NewsTraderInvestigation implements IStrategy {
             }
 
             if (debug)
-                console.getOut().print(
-                        "File " + filename + " been successfully parsed!\n Number of news releases: " + list.size());
+                console.getOut().print("File " + filename + " been successfully parsed!\n Number of news releases: " + list.size());
 
             return list;
         }
@@ -1581,9 +1667,10 @@ public class NewsTraderInvestigation implements IStrategy {
     class NewsEvent implements Comparable<NewsEvent> {
 
         private final java.text.SimpleDateFormat FORMATTER;
-        private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         private String title;
-        private Boolean positive; //true/false the better value of the estimated measure the better it is for the currency
+        private Boolean positive; // true/false the better value of the
+                                    // estimated measure the better it is for
+                                    // the currency
         private Date dateTime;
         private String currency;
         private String pair;// instrument name
@@ -1678,7 +1765,6 @@ public class NewsTraderInvestigation implements IStrategy {
 
             return result;
         }
-        
 
         private String purify(String s) {
 
@@ -1695,8 +1781,8 @@ public class NewsTraderInvestigation implements IStrategy {
             return result;
         }
 
-        public String createLine(String title, String dateTime, String currency, String importance, String previous,
-                String forecast, String actual) {
+        public String createLine(String title, String dateTime, String currency, String importance, String previous, String forecast,
+                String actual) {
             String line = dateTime + "; ";
             line += currency + "; ";
             line += importance + "; ";
@@ -1776,7 +1862,7 @@ public class NewsTraderInvestigation implements IStrategy {
             boolean result = false;
             if (o instanceof NewsEvent) {
                 NewsEvent event = (NewsEvent) o;
-                result = compareTo(event) == 0;
+                result = hashCode() == event.hashCode();
             }
 
             return result;
@@ -1802,8 +1888,7 @@ public class NewsTraderInvestigation implements IStrategy {
 
         @Override
         public String toString() {
-            // TODO replace all commas to be a dot: 1,12345 -> 1.12345
-
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
             java.text.DecimalFormat df = new java.text.DecimalFormat("#0.#");
 
             java.text.DecimalFormatSymbols dfs = df.getDecimalFormatSymbols();
@@ -1818,11 +1903,13 @@ public class NewsTraderInvestigation implements IStrategy {
             line += importance.substring(0, 1) + sr;
             line += title + sr;
             line += pair + sr;
-            line += (changePercentage != null ? df.format(changePercentage) + "%" : "") + sr;
-            line += pf.format(previousCandleChangePips) + sr;
-            line += pf.format(changePips);
+            line += (changePercentage != null ? df.format(changePercentage) + "%" : "-") + sr;
+            line += (previousCandleChangePips != null ? df.format(previousCandleChangePips) + "" : "-") + sr;
+            line += (changePips != null ? df.format(changePips) + "" : "-") + sr;
+
             return line;
-            // date time, currency, importance, title, instrument, changePercentage, previousCandleChangePips, changePips
+            // date time, currency, importance, title, instrument,
+            // changePercentage, previousCandleChangePips, changePips
         }
 
         public String getLine() {
@@ -1873,9 +1960,8 @@ public class NewsTraderInvestigation implements IStrategy {
             this.changePips = changePips;
         }
 
-        private String[] filterList = new String[] { " (Jan)", " (Feb)", " (Mar)", " (Apr)", " (May)", " (Jun)",
-                " (Jul)", " (Aug)", " (Sep)", " (Oct)", " (Nov)", " (Dec)", " (Q1)", " (Q2)", " (Q3)", " (Q4)",
-                " (QoQ)", " (YoY)", " (MoM)" };
+        private String[] filterList = new String[] { " (Jan)", " (Feb)", " (Mar)", " (Apr)", " (May)", " (Jun)", " (Jul)", " (Aug)",
+                " (Sep)", " (Oct)", " (Nov)", " (Dec)", " (Q1)", " (Q2)", " (Q3)", " (Q4)", " (QoQ)", " (YoY)", " (MoM)" };
     }
 
 }
